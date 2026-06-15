@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>03-B. 일본 MOF 소재 성과 Overview</title>
+<style>
+:root{
+  --bg:#f7f7f4;--paper:#fff;--ink:#171717;--muted:#676767;--line:#deded8;
+  --mof:#9a7a52;--mof2:#79664f;--soft:#f3eee7;--border:#e2d7c8;
+  --good:#45634d;--good-soft:#e0eae2;--shadow:0 18px 50px rgba(0,0,0,.08)
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);
+font-family:-apple-system,BlinkMacSystemFont,"Pretendard","Apple SD Gothic Neo","Noto Sans KR","Segoe UI",sans-serif;
+font-size:19.2px;line-height:1.75;word-break:keep-all}
+a{text-decoration:none;color:inherit}
+.wrap{max-width:1320px;margin:auto;padding:0 22px}
+.hero{padding:78px 0 48px}
+.eyebrow{display:inline-block;padding:7px 12px;border-radius:999px;background:#eee4d7;
+color:var(--mof);font-size:14px;font-weight:900}
+h1{font-size:clamp(42px,5.5vw,76px);line-height:1.08;letter-spacing:-.065em;margin:18px 0 0}
+.hero p{max-width:1000px;color:#51483f;font-size:clamp(20px,2.2vw,27px)}
+.meta{display:flex;gap:9px;flex-wrap:wrap}
+.meta span{font-size:14px;padding:6px 10px;border:1px solid var(--border);border-radius:999px;background:#fff}
+.section{padding:48px 0}
+.section-head{display:grid;grid-template-columns:220px 1fr;gap:24px;margin-bottom:26px}
+.no{font-size:14px;font-weight:900;color:var(--mof2);padding-top:7px}
+h2{font-size:clamp(30px,3.2vw,48px);line-height:1.16;letter-spacing:-.055em;margin:0;color:var(--mof)}
+.lead{font-size:21.6px;color:var(--mof2);margin:12px 0 0}
+.kpis{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.kpi{background:var(--soft);border:1px solid var(--border);border-radius:20px;padding:22px;box-shadow:var(--shadow)}
+.kpi span{display:block;color:var(--mof2);font-size:15px;font-weight:900}
+.kpi strong{display:block;font-size:29px;letter-spacing:-.045em;margin-top:7px}
+.compare{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.creative{background:#fff;border:1px solid var(--border);border-radius:24px;overflow:hidden;box-shadow:var(--shadow)}
+.creative-body{padding:25px}
+.creative-top{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.rank{font-weight:950;color:var(--mof);letter-spacing:.08em}
+.verdict{font-size:13px;font-weight:900;padding:5px 9px;border-radius:999px;background:#eee4d7;color:#705837}
+.creative h3{font-size:31px;color:var(--mof);letter-spacing:-.045em;margin:12px 0 4px}
+.summary{color:#5f5750;margin:0 0 18px}
+.gallery{display:grid;gap:8px;background:#eae5de;padding:8px}
+.gallery.g3{grid-template-columns:repeat(3,1fr)}
+.gallery.g4{grid-template-columns:repeat(4,1fr)}
+.gallery img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:10px}
+.mini-kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:18px}
+.mini-kpis div{background:var(--soft);border-radius:12px;padding:11px}
+.mini-kpis span{display:block;font-size:12px;color:var(--mof2);font-weight:800}
+.mini-kpis strong{font-size:16px}
+.interpret,.action{margin-top:17px;padding:16px 17px;border-radius:14px}
+.interpret{background:#f7f5f1}
+.action{background:var(--good-soft);border-left:4px solid var(--good)}
+.interpret b,.action b{font-size:15px}
+.interpret p,.action p{margin:5px 0 0;font-size:16px;color:#514c48}
+.table-wrap{overflow-x:auto;border-radius:18px;box-shadow:var(--shadow)}
+table{width:100%;min-width:1180px;border-collapse:collapse;background:#fff}
+th,td{padding:14px 13px;border-bottom:1px solid var(--line);font-size:15px;white-space:nowrap;text-align:right}
+th{background:#111;color:#fff!important;font-weight:900}
+th:first-child,td:first-child{text-align:left}
+tr:last-child td{border-bottom:0}
+.formula-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.formula{background:#fff;border:1px solid var(--border);border-radius:18px;padding:20px}
+.formula h3{color:var(--mof);margin:0;font-size:21px}
+.formula code{display:block;margin-top:9px;padding:12px;border-radius:10px;background:#f3eee7;font-family:inherit;font-size:15px}
+.formula p{font-size:15px;color:#625a55;margin-bottom:0}
+.message-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.message{background:#fff;border:1px solid var(--border);border-radius:20px;padding:23px}
+.message h3{margin:0 0 10px;color:var(--mof)}
+.message blockquote{margin:0;padding-left:16px;border-left:4px solid var(--mof);color:#504943;font-size:16px}
+.decision{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.decision article{border-radius:20px;padding:23px;background:#fff;border:1px solid var(--border)}
+.decision h3{color:var(--mof);margin:0 0 8px}
+.decision p{margin:0;color:#5e5752}
+.note{padding:20px 22px;border-radius:16px;background:#f4eee2;border:1px solid #e3dac2;color:#554a39}
+footer{margin-top:50px;padding:35px 0 65px;border-top:1px solid var(--line);font-size:14px;color:var(--muted)}
+@media(max-width:1000px){
+  .kpis{grid-template-columns:repeat(2,1fr)}
+  .compare,.message-grid{grid-template-columns:1fr}
+  .formula-grid,.decision{grid-template-columns:1fr}
+}
+@media(max-width:760px){
+  .section-head{grid-template-columns:1fr;gap:7px}
+  .kpis{grid-template-columns:1fr}
+  .mini-kpis{grid-template-columns:repeat(2,1fr)}
+  .gallery.g3,.gallery.g4{grid-template-columns:repeat(2,1fr)}
+}
+
+
+
+
+
+
+
+
+
+
+/* SERENE_COMMON_GNB_CSS_START */
+.serene-common-gnb{
+  position:sticky;
+  top:0;
+  z-index:10000;
+  background:rgba(247,247,244,.96);
+  border-bottom:1px solid #deded8;
+  backdrop-filter:blur(16px);
+}
+.serene-common-gnb-inner{
+  max-width:1440px;
+  margin:0 auto;
+  padding:13px 22px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+}
+.serene-common-brand{
+  color:#171717!important;
+  font-size:15px!important;
+  font-weight:950!important;
+  letter-spacing:-.04em;
+  white-space:nowrap;
+  text-decoration:none!important;
+}
+.serene-common-links{
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+  gap:14px;
+  flex-wrap:wrap;
+}
+.serene-common-links a{
+  color:#676767!important;
+  font-size:15px!important;
+  font-weight:700!important;
+  line-height:1.35!important;
+  text-decoration:none!important;
+  padding:0!important;
+  margin:0!important;
+  border-radius:0!important;
+  background:transparent!important;
+}
+.serene-common-links a:hover{color:#171717!important}
+@media(max-width:1040px){
+  .serene-common-gnb-inner{
+    align-items:flex-start;
+    flex-direction:column;
+  }
+  .serene-common-links{
+    justify-content:flex-start;
+    gap:10px 14px;
+  }
+}
+@media(max-width:680px){
+  .serene-common-links a{font-size:13px!important}
+}
+/* SERENE_COMMON_GNB_CSS_END */
+
+
+/* JAPAN_SUBNAV_START */
+.japan-subnav-wrap{
+  max-width:1320px;
+  margin:18px auto 0;
+  padding:0 22px;
+}
+.japan-breadcrumb{
+  font-size:13px;
+  color:#777;
+  margin-bottom:10px;
+}
+.japan-subnav{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  padding:8px;
+  background:#ffffff;
+  border:1px solid #deded8;
+  border-radius:16px;
+  box-shadow:0 10px 30px rgba(0,0,0,.05);
+}
+.japan-subnav a{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:40px;
+  padding:9px 16px;
+  border-radius:11px;
+  color:#676767!important;
+  font-size:14px!important;
+  font-weight:800!important;
+  text-decoration:none!important;
+  background:transparent!important;
+}
+.japan-subnav a:hover{
+  color:#171717!important;
+  background:#f3f1ec!important;
+}
+.japan-subnav a.active{
+  color:#ffffff!important;
+  background:#745243!important;
+}
+@media(max-width:680px){
+  .japan-subnav{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+  }
+  .japan-subnav a{
+    width:100%;
+  }
+}
+/* JAPAN_SUBNAV_END */
+
+</style>
+</head>
+<body>
+
+<!-- SERENE_COMMON_GNB_START -->
+<header class="serene-common-gnb">
+  <div class="serene-common-gnb-inner">
+    <a class="serene-common-brand" href="index.html">SERENE Monthly Performance</a>
+    <nav class="serene-common-links" aria-label="세린 월간 성과 리포트 메뉴">
+      <a href="index.html">HOME</a>
+<a href="01_total_business_report.html">세린 전체</a>
+<a href="02_agency_report.html">에이전시</a>
+<a href="03_japan_direct_report.html">일본 다이렉트</a>
+<a href="04_channel_comparison.html">채널 비교</a>
+<a href="05_data_methodology.html">데이터 기준</a>
+<a href="06_funnel_marketing_necessity_report.html">퍼널 필요성</a>
+    </nav>
+  </div>
+</header>
+<!-- SERENE_COMMON_GNB_END -->
+
+<!-- JAPAN_SUBNAV_MARKUP_START -->
+<div class="japan-subnav-wrap">
+  <div class="japan-breadcrumb">일본 다이렉트 &gt; MOF 소재</div>
+  <nav class="japan-subnav" aria-label="일본 다이렉트 세부 메뉴">
+    <a href="03_japan_direct_report.html">Overview</a><a href="03a_tof_creative_performance.html">TOF 소재</a><a href="03b_mof_creative_performance.html" class="active" aria-current="page">MOF 소재</a><a href="03c_bof_creative_performance.html">BOF 소재</a>
+  </nav>
+</div>
+<!-- JAPAN_SUBNAV_MARKUP_END -->
+
+
+
+
+
+
+
+
+
+
+
+<main class="wrap">
+<section class="hero">
+  <div class="eyebrow">03-B / MOF CREATIVE PERFORMANCE</div>
+  <h1>일본 MOF 소재 성과<br>이미지 기반 Overview</h1>
+  <p>MOF는 영상 완주가 아니라 <strong>프로필 방문·클릭·참여·저장</strong>을 통해 병원을 검토하게 만드는 단계입니다. 5월의 2개 카루셀 소재를 같은 기준으로 비교했습니다.</p>
+  <div class="meta">
+    <span>분석기간 2026.05.01–05.31</span>
+    <span>MOF 광고비 247,782원</span>
+    <span>프로필 방문 705회</span>
+    <span>링크 클릭 685회</span>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div class="no">01 / TOTAL KPI</div>
+    <div><h2>MOF 전체 성과</h2>
+    <p class="lead">CTR 2.25%, 프로필 방문당 비용 351원으로 관심 고객을 검토 단계로 효율적으로 이동시켰습니다.</p></div>
+  </div>
+  <div class="kpis">
+    <div class="kpi"><span>총 광고비</span><strong>247,782원</strong></div>
+    <div class="kpi"><span>총 노출</span><strong>30,417회</strong></div>
+    <div class="kpi"><span>링크 클릭</span><strong>685회</strong></div>
+    <div class="kpi"><span>프로필 방문</span><strong>705회</strong></div>
+    <div class="kpi"><span>방문당 비용</span><strong>351원</strong></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div class="no">02 / CREATIVE REVIEW</div>
+    <div><h2>소재별 이미지와 성과 해석</h2>
+    <p class="lead">메시지 적합성, 실제 검토 행동, 표본 크기를 함께 고려했습니다.</p></div>
+  </div>
+  <div class="compare">
+    <article class="creative">
+      <div class="gallery g3"><img src="assets/mof/doctor_pointer_1.jpg" alt="Doctor Pointer 1"><img src="assets/mof/doctor_pointer_2.jpg" alt="Doctor Pointer 2"><img src="assets/mof/doctor_pointer_3.jpg" alt="Doctor Pointer 3"></div>
+      <div class="creative-body">
+        <div class="creative-top"><span class="rank">01</span><span class="verdict">최우수 · 확장</span></div>
+        <h3>Doctor Pointer</h3>
+        <p class="summary">의사 책임성과 일관된 진료 메시지가 검토 행동을 강하게 유도</p>
+        <div class="mini-kpis">
+          <div><span>광고비</span><strong>233,309원</strong></div>
+          <div><span>CTR</span><strong>2.27%</strong></div>
+          <div><span>프로필 방문</span><strong>669회</strong></div>
+          <div><span>방문당 비용</span><strong>349원</strong></div>
+        </div>
+        <div class="interpret"><b>왜 좋은가</b><p>MOF에서 환자가 확인하고 싶은 핵심 질문인 ‘누가 상담하고 누가 시술하는가’를 직접 해결합니다. 원장 직접 상담·시술, 얼굴형 맞춤 디자인, 책임 진료라는 증거가 명확해 CTR 2.27%, 프로필 방문 669회, 방문당 비용 349원을 기록했습니다.</p></div>
+        <div class="action"><b>다음 액션</b><p>메인 MOF 소재로 유지하고, 원장 얼굴·실제 상담 장면·시술 장면을 각각 첫 장으로 바꾼 변형본을 제작합니다. 프로필 방문자와 저장자를 BOF LINE 상담 소재로 재접촉합니다.</p></div>
+      </div>
+    </article>
+
+    <article class="creative">
+      <div class="gallery g4"><img src="assets/mof/3point_1.jpg" alt="3Point 1"><img src="assets/mof/3point_2.jpg" alt="3Point 2"><img src="assets/mof/3point_3.jpg" alt="3Point 3"><img src="assets/mof/3point_4.jpg" alt="3Point 4"></div>
+      <div class="creative-body">
+        <div class="creative-top"><span class="rank">02</span><span class="verdict">양호 · 추가 검증</span></div>
+        <h3>3Point</h3>
+        <p class="summary">브랜드 선택 이유는 명확하지만 표본과 행동 강도가 아직 제한적</p>
+        <div class="mini-kpis">
+          <div><span>광고비</span><strong>14,473원</strong></div>
+          <div><span>CTR</span><strong>1.95%</strong></div>
+          <div><span>프로필 방문</span><strong>36회</strong></div>
+          <div><span>방문당 비용</span><strong>402원</strong></div>
+        </div>
+        <div class="interpret"><b>왜 이런 결과인가</b><p>일본어 상담, 원장 일관 대응, 자연스러운 결과라는 세 가지 선택 이유를 구조적으로 제시해 MOF 메시지 적합성은 높습니다. 다만 예산이 14,473원으로 Doctor Pointer의 약 6%에 불과해 절대 성과 비교는 어렵고, 프로필 방문당 비용은 402원으로 다소 높았습니다.</p></div>
+        <div class="action"><b>다음 액션</b><p>Doctor Pointer와 동일 예산 조건으로 재테스트합니다. 첫 장의 ‘3가지 이유’ 문구를 더 짧게 만들고, 마지막 장 CTA를 LINE 상담이 아니라 ‘프로필에서 사례 보기’로 낮춰 검토 행동을 유도합니다.</p></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div class="no">03 / DETAIL TABLE</div>
+    <div><h2>소재별 세부 지표 비교</h2>
+    <p class="lead">MOF에서는 프로필 방문당 비용과 프로필 방문률이 핵심 결과 지표입니다.</p></div>
+  </div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr>
+        <th>소재</th><th>광고비</th><th>도달</th><th>노출</th><th>빈도</th><th>CPM</th>
+        <th>클릭</th><th>CTR</th><th>CPC</th><th>프로필 방문</th><th>방문당 비용</th>
+        <th>프로필 방문률</th><th>게시물 참여</th><th>참여율</th><th>팔로우</th>
+      </tr></thead>
+      <tbody>
+    <tr>
+      <td><strong>Doctor Pointer</strong></td>
+      <td>233,309원</td>
+      <td>25,738회</td>
+      <td>28,573회</td>
+      <td>1.11</td>
+      <td>8,165원</td>
+      <td>649회</td>
+      <td>2.27%</td>
+      <td>359원</td>
+      <td>669회</td>
+      <td>349원</td>
+      <td>2.34%</td>
+      <td>663회</td>
+      <td>2.32%</td>
+      <td>10회</td>
+    </tr>
+    
+    <tr>
+      <td><strong>3Point</strong></td>
+      <td>14,473원</td>
+      <td>1,597회</td>
+      <td>1,844회</td>
+      <td>1.15</td>
+      <td>7,849원</td>
+      <td>36회</td>
+      <td>1.95%</td>
+      <td>402원</td>
+      <td>36회</td>
+      <td>402원</td>
+      <td>1.95%</td>
+      <td>39회</td>
+      <td>2.11%</td>
+      <td>0회</td>
+    </tr>
+    </tbody>
+    </table>
+  </div>
+  <div class="note" style="margin-top:15px">
+    <strong>비교 주의</strong> Doctor Pointer는 233,309원, 3Point는 14,473원이 집행됐습니다. 예산 차이가 약 16배이므로 절대 방문 수보다 CTR·CPC·방문당 비용을 우선 비교해야 합니다.
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div class="no">04 / KPI LOGIC</div>
+    <div><h2>MOF 핵심 지표는 어떻게 도출되는가</h2></div>
+  </div>
+  <div class="formula-grid">
+    <article class="formula"><h3>프로필 방문당 비용</h3><code>광고비 ÷ Instagram 프로필 방문</code><p>검토 의도가 있는 사용자를 병원 프로필로 이동시키는 비용입니다. MOF의 가장 직접적인 효율 지표입니다.</p></article>
+    <article class="formula"><h3>프로필 방문률</h3><code>프로필 방문 ÷ 노출 × 100</code><p>광고를 본 사람 중 병원을 더 알아보려 한 비율입니다. 메시지와 프로필 기대감의 적합성을 반영합니다.</p></article>
+    <article class="formula"><h3>CTR</h3><code>링크 클릭 ÷ 노출 × 100</code><p>첫 이미지와 카피가 추가 탐색을 얼마나 유도했는지 보여줍니다.</p></article>
+    <article class="formula"><h3>CPC</h3><code>광고비 ÷ 링크 클릭</code><p>한 번의 탐색 행동을 확보하는 비용입니다. 낮을수록 같은 예산으로 더 많은 검토자를 확보합니다.</p></article>
+    <article class="formula"><h3>참여율</h3><code>게시물 참여 ÷ 노출 × 100</code><p>클릭뿐 아니라 카루셀 넘김·좋아요 등 콘텐츠 반응을 포함합니다.</p></article>
+    <article class="formula"><h3>빈도</h3><code>노출 ÷ 도달</code><p>한 사람이 평균 몇 번 봤는지 나타냅니다. MOF는 1회 노출보다 반복 검토가 중요하지만 과도한 빈도는 피로를 만듭니다.</p></article>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div class="no">05 / MESSAGE FIT</div>
+    <div><h2>소재 메시지 적합성</h2></div>
+  </div>
+  <div class="message-grid">
+    <article class="message">
+      <h3>Doctor Pointer</h3>
+      <blockquote>같은 시술명이라도 완성된 모습은 누가 담당하느냐에 따라 달라집니다. 상담부터 시술까지 원장이 직접 담당합니다.</blockquote>
+      <p>MOF 고객의 핵심 불안인 의료진 책임성과 결과 편차를 직접 해결합니다. ‘누구에게 맡길 것인가’라는 비교 질문과 정확히 맞습니다.</p>
+    </article>
+    <article class="message">
+      <h3>3Point</h3>
+      <blockquote>일본어 상담, 의사의 일관 대응, 자연스러운 결과. 미용 의료가 처음인 분도 안심하고 상담받을 수 있는 클리닉.</blockquote>
+      <p>병원의 선택 이유를 세 가지로 정리해 브랜드 이해에 유리합니다. 다만 한 소재에 정보가 많아 첫 장 후킹과 마지막 CTA를 더 단순화할 필요가 있습니다.</p>
+    </article>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div class="no">06 / FINAL DECISION</div>
+    <div><h2>MOF 소재 운영 결론</h2></div>
+  </div>
+  <div class="decision">
+    <article><h3>1. 확장: Doctor Pointer</h3><p>원장 직접 진료라는 차별성이 명확하고, CTR·프로필 방문당 비용 모두 우수합니다. MOF 메인 소재로 유지합니다.</p></article>
+    <article><h3>2. 재검증: 3Point</h3><p>메시지는 적합하지만 표본이 작습니다. 동일 예산으로 테스트한 뒤 성과를 판단합니다.</p></article>
+    <article><h3>3. BOF 연결</h3><p>두 소재의 프로필 방문자와 참여자를 대상으로 LINE 상담·FAQ·예약 장벽 제거 소재를 후속 노출합니다.</p></article>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div class="no">NEXT / BOF</div>
+    <div><h2>다음 상세 분석 · BOF 소재</h2>
+    <p class="lead">MOF에서 병원을 검토한 사용자가 GW 이벤트 가격·패키지 정보를 통해 랜딩페이지로 이동한 성과를 확인합니다.</p></div>
+  </div>
+  <a href="03c_bof_creative_performance.html" style="display:block;background:#EDF3E9;border:1px solid #D6E2D0;border-radius:20px;padding:24px;color:#4F6F49;font-weight:900">
+    BOF 소재 성과 상세 보기 →
+  </a>
+</section>
+
+</main>
+<footer><div class="wrap">Serene Clinic · Japan MOF Creative Performance · May 2026</div></footer>
+</body>
+</html>

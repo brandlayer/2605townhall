@@ -1,0 +1,415 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>03-A. 일본 TOF 소재 성과 Overview</title><style>
+:root{--bg:#f7f7f4;--paper:#fff;--ink:#171717;--muted:#676767;--line:#deded8;
+--terra:#745243;--terra2:#846b61;--soft:#f5efec;--border:#e7d9d1;--green:#426757;
+--shadow:0 18px 50px rgba(0,0,0,.08)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);
+font-family:-apple-system,BlinkMacSystemFont,"Pretendard","Apple SD Gothic Neo","Noto Sans KR","Segoe UI",sans-serif;
+font-size:19.2px;line-height:1.75;word-break:keep-all}
+a{text-decoration:none;color:inherit}.topbar{position:sticky;top:0;z-index:30;background:rgba(247,247,244,.94);
+backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}.nav{max-width:1320px;margin:auto;padding:13px 22px;
+display:flex;align-items:center;justify-content:space-between;gap:16px}.brand{font-weight:950;letter-spacing:-.04em}
+.links{display:flex;gap:14px;flex-wrap:wrap}.links a{font-size:15px;font-weight:700;color:var(--muted)}.links a:hover{color:var(--ink)}
+.wrap{max-width:1320px;margin:auto;padding:0 22px}.hero{padding:78px 0 48px}.eyebrow{display:inline-block;
+padding:7px 12px;border-radius:999px;background:#ebddd5;color:var(--terra);font-size:14px;font-weight:900}
+h1{font-size:clamp(42px,5.5vw,76px);line-height:1.08;letter-spacing:-.065em;margin:18px 0 0}
+.hero p{max-width:1000px;color:#4e4743;font-size:clamp(20px,2.2vw,27px)}
+.meta{display:flex;gap:9px;flex-wrap:wrap}.meta span{font-size:14px;padding:6px 10px;border:1px solid var(--border);
+border-radius:999px;background:#fff}.section{padding:48px 0}.section-head{display:grid;grid-template-columns:220px 1fr;
+gap:24px;margin-bottom:26px}.no{font-size:14px;font-weight:900;color:var(--terra2);padding-top:7px}
+h2{font-size:clamp(30px,3.2vw,48px);line-height:1.16;letter-spacing:-.055em;margin:0;color:var(--terra)}
+.lead{font-size:21.6px;color:var(--terra2);margin:12px 0 0}.kpis{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.kpi{background:var(--soft);border:1px solid var(--border);border-radius:20px;padding:22px;box-shadow:var(--shadow)}
+.kpi span{display:block;color:var(--terra2);font-size:15px;font-weight:900}.kpi strong{display:block;font-size:29px;
+letter-spacing:-.045em;margin-top:7px}.creative-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.creative-card{background:#fff;border:1px solid var(--border);border-radius:24px;overflow:hidden;box-shadow:var(--shadow)}
+.creative-image{height:520px;background:#eee;overflow:hidden}.creative-image img{width:100%;height:100%;object-fit:cover;object-position:center top}
+.creative-body{padding:25px}.creative-top{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.rank{font-weight:950;color:var(--terra);letter-spacing:.08em}.verdict{font-size:13px;font-weight:900;
+padding:5px 9px;border-radius:999px;background:#f0e7da;color:#765c36}.creative-card h3{font-size:31px;color:var(--terra);
+letter-spacing:-.045em;margin:12px 0 4px}.creative-summary{color:#5f5752;margin:0 0 18px}
+.mini-kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.mini-kpis div{background:var(--soft);
+border-radius:12px;padding:11px}.mini-kpis span{display:block;font-size:12px;color:var(--terra2);font-weight:800}
+.mini-kpis strong{font-size:16px}.interpret,.action{margin-top:17px;padding:16px 17px;border-radius:14px}
+.interpret{background:#f7f5f1}.action{background:#e9f0ec;border-left:4px solid var(--green)}
+.interpret b,.action b{font-size:15px}.interpret p,.action p{margin:5px 0 0;font-size:16px;color:#514c48}
+.table-wrap{overflow-x:auto;border-radius:18px;box-shadow:var(--shadow)}table{width:100%;min-width:1150px;
+border-collapse:collapse;background:#fff}th,td{padding:14px 13px;border-bottom:1px solid var(--line);font-size:15px;
+white-space:nowrap;text-align:right}th{background:#111;color:#fff!important;font-weight:900}th:first-child,td:first-child{text-align:left}
+tr:last-child td{border-bottom:0}.formula-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.formula{background:#fff;border:1px solid var(--border);border-radius:18px;padding:20px}.formula h3{color:var(--terra);
+margin:0;font-size:21px}.formula code{display:block;margin-top:9px;padding:12px;border-radius:10px;background:#f3efe8;
+font-family:inherit;font-size:15px}.formula p{font-size:15px;color:#625a55;margin-bottom:0}
+.decision{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.decision article{border-radius:20px;padding:23px;
+background:#fff;border:1px solid var(--border)}.decision h3{color:var(--terra);margin:0 0 8px}.decision p{margin:0;color:#5e5752}
+.note{padding:20px 22px;border-radius:16px;background:#f4eee2;border:1px solid #e3dac2;color:#554a39}
+footer{margin-top:50px;padding:35px 0 65px;border-top:1px solid var(--line);font-size:14px;color:var(--muted)}
+@media(max-width:1000px){.kpis{grid-template-columns:repeat(2,1fr)}.creative-grid{grid-template-columns:1fr}
+.formula-grid,.decision{grid-template-columns:1fr}.creative-image{height:620px}}
+@media(max-width:760px){.links{display:none}.section-head{grid-template-columns:1fr;gap:7px}.kpis{grid-template-columns:1fr}
+.mini-kpis{grid-template-columns:repeat(2,1fr)}.creative-image{height:450px}}
+
+
+
+
+
+
+
+
+
+
+/* SERENE_COMMON_GNB_CSS_START */
+.serene-common-gnb{
+  position:sticky;
+  top:0;
+  z-index:10000;
+  background:rgba(247,247,244,.96);
+  border-bottom:1px solid #deded8;
+  backdrop-filter:blur(16px);
+}
+.serene-common-gnb-inner{
+  max-width:1440px;
+  margin:0 auto;
+  padding:13px 22px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+}
+.serene-common-brand{
+  color:#171717!important;
+  font-size:15px!important;
+  font-weight:950!important;
+  letter-spacing:-.04em;
+  white-space:nowrap;
+  text-decoration:none!important;
+}
+.serene-common-links{
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+  gap:14px;
+  flex-wrap:wrap;
+}
+.serene-common-links a{
+  color:#676767!important;
+  font-size:15px!important;
+  font-weight:700!important;
+  line-height:1.35!important;
+  text-decoration:none!important;
+  padding:0!important;
+  margin:0!important;
+  border-radius:0!important;
+  background:transparent!important;
+}
+.serene-common-links a:hover{color:#171717!important}
+@media(max-width:1040px){
+  .serene-common-gnb-inner{
+    align-items:flex-start;
+    flex-direction:column;
+  }
+  .serene-common-links{
+    justify-content:flex-start;
+    gap:10px 14px;
+  }
+}
+@media(max-width:680px){
+  .serene-common-links a{font-size:13px!important}
+}
+/* SERENE_COMMON_GNB_CSS_END */
+
+
+/* JAPAN_SUBNAV_START */
+.japan-subnav-wrap{
+  max-width:1320px;
+  margin:18px auto 0;
+  padding:0 22px;
+}
+.japan-breadcrumb{
+  font-size:13px;
+  color:#777;
+  margin-bottom:10px;
+}
+.japan-subnav{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  padding:8px;
+  background:#ffffff;
+  border:1px solid #deded8;
+  border-radius:16px;
+  box-shadow:0 10px 30px rgba(0,0,0,.05);
+}
+.japan-subnav a{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:40px;
+  padding:9px 16px;
+  border-radius:11px;
+  color:#676767!important;
+  font-size:14px!important;
+  font-weight:800!important;
+  text-decoration:none!important;
+  background:transparent!important;
+}
+.japan-subnav a:hover{
+  color:#171717!important;
+  background:#f3f1ec!important;
+}
+.japan-subnav a.active{
+  color:#ffffff!important;
+  background:#745243!important;
+}
+@media(max-width:680px){
+  .japan-subnav{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+  }
+  .japan-subnav a{
+    width:100%;
+  }
+}
+/* JAPAN_SUBNAV_END */
+
+</style></head><body>
+
+<!-- SERENE_COMMON_GNB_START -->
+<header class="serene-common-gnb">
+  <div class="serene-common-gnb-inner">
+    <a class="serene-common-brand" href="index.html">SERENE Monthly Performance</a>
+    <nav class="serene-common-links" aria-label="세린 월간 성과 리포트 메뉴">
+      <a href="index.html">HOME</a>
+<a href="01_total_business_report.html">세린 전체</a>
+<a href="02_agency_report.html">에이전시</a>
+<a href="03_japan_direct_report.html">일본 다이렉트</a>
+<a href="04_channel_comparison.html">채널 비교</a>
+<a href="05_data_methodology.html">데이터 기준</a>
+<a href="06_funnel_marketing_necessity_report.html">퍼널 필요성</a>
+    </nav>
+  </div>
+</header>
+<!-- SERENE_COMMON_GNB_END -->
+
+<!-- JAPAN_SUBNAV_MARKUP_START -->
+<div class="japan-subnav-wrap">
+  <div class="japan-breadcrumb">일본 다이렉트 &gt; TOF 소재</div>
+  <nav class="japan-subnav" aria-label="일본 다이렉트 세부 메뉴">
+    <a href="03_japan_direct_report.html">Overview</a><a href="03a_tof_creative_performance.html" class="active" aria-current="page">TOF 소재</a><a href="03b_mof_creative_performance.html">MOF 소재</a><a href="03c_bof_creative_performance.html">BOF 소재</a>
+  </nav>
+</div>
+<!-- JAPAN_SUBNAV_MARKUP_END -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<main class="wrap">
+<section class="hero">
+<div class="eyebrow">03-A / TOF CREATIVE PERFORMANCE</div>
+<h1>일본 TOF 소재 성과<br>이미지 기반 Overview</h1>
+<p>2026년 5월 집행한 4개 영상 소재를 동일한 조회 퍼널로 비교합니다. TOF에서는 클릭보다 <strong>저비용 도달, 3초 시청, ThruPlay, 95%·100% 유지율</strong>이 핵심입니다.</p>
+<div class="meta"><span>분석기간 2026.05.01–05.31</span><span>TOF 광고비 763,935원</span>
+<span>ThruPlay 42,869회</span><span>4개 소재 등록·3개 실제 집행</span></div>
+</section>
+
+<section class="section">
+<div class="section-head"><div class="no">01 / TOTAL KPI</div><div><h2>TOF 전체 성과</h2>
+<p class="lead">전체 캠페인은 낮은 CPM과 약 18원의 ThruPlay당 비용으로 인지 풀을 효율적으로 확보했습니다.</p></div></div>
+<div class="kpis">
+<div class="kpi"><span>총 광고비</span><strong>763,935원</strong></div>
+<div class="kpi"><span>총 노출</span><strong>177,824회</strong></div>
+<div class="kpi"><span>3초 이상 재생</span><strong>96,812회</strong></div>
+<div class="kpi"><span>ThruPlay</span><strong>42,869회</strong></div>
+<div class="kpi"><span>95% 재생</span><strong>40,184회</strong></div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-head"><div class="no">02 / CREATIVE CARDS</div><div><h2>소재별 이미지와 성과 해석</h2>
+<p class="lead">단순 조회량이 아니라 비용 효율과 시청 유지력을 함께 봐야 합니다.</p></div></div>
+<div class="creative-grid">
+    <article class="creative-card">
+      <div class="creative-image"><img src="assets/tof/rena.jpg" alt="Rena TOF 소재 이미지"></div>
+      <div class="creative-body">
+        <div class="creative-top"><span class="rank">01</span><span class="verdict">최우수 · 확장</span></div>
+        <h3>Rena</h3>
+        <p class="creative-summary">대규모 도달과 완주 효율을 동시에 확보한 핵심 소재</p>
+        <div class="mini-kpis">
+          <div><span>광고비</span><strong>680,041원</strong></div>
+          <div><span>ThruPlay</span><strong>38,206</strong></div>
+          <div><span>ThruPlay당</span><strong>18원</strong></div>
+          <div><span>완주율</span><strong>45.9%</strong></div>
+        </div>
+        <div class="interpret"><b>왜 이런 결과인가</b><p>셀피형 첫 화면과 짧고 직관적인 체험 서사가 스크롤 정지와 끝까지 보기 모두에 유리했습니다. 전체 TOF 예산의 대부분이 배분됐음에도 ThruPlay와 완주당 비용이 안정적으로 유지돼 알고리즘 확장성이 확인됩니다.</p></div>
+        <div class="action"><b>다음 액션</b><p>메인 확장 소재로 유지하되, 동일 인물·동일 구조의 후속편을 제작하고 첫 1초 문구와 체험 장면만 바꾼 변형 소재를 추가합니다.</p></div>
+      </div>
+    </article>
+    
+    <article class="creative-card">
+      <div class="creative-image"><img src="assets/tof/hanon.jpg" alt="Hanon TOF 소재 이미지"></div>
+      <div class="creative-body">
+        <div class="creative-top"><span class="rank">02</span><span class="verdict">유입 우수 · 리컷</span></div>
+        <h3>Hanon</h3>
+        <p class="creative-summary">초기 조회와 프로필 반응이 강하지만 후반 이탈이 큰 소재</p>
+        <div class="mini-kpis">
+          <div><span>광고비</span><strong>59,162원</strong></div>
+          <div><span>ThruPlay</span><strong>3,432</strong></div>
+          <div><span>ThruPlay당</span><strong>17원</strong></div>
+          <div><span>완주율</span><strong>9.7%</strong></div>
+        </div>
+        <div class="interpret"><b>왜 이런 결과인가</b><p>인플루언서 얼굴과 성수 방문 맥락이 첫 관심을 잘 만들었고 CPM·3초 조회당 비용·ThruPlay당 비용이 가장 낮은 수준입니다. 반면 3초 시청자 중 완주 비율은 9.7%로 낮아, 여행 정보와 병원 메시지가 길게 결합되며 집중력이 분산됐을 가능성이 있습니다.</p></div>
+        <div class="action"><b>다음 액션</b><p>15초 이내로 리컷하고 병원 장면과 결과 인상을 앞당깁니다. 저장과 프로필 방문 반응이 좋아 MOF 유입용 버전으로도 분리 테스트합니다.</p></div>
+      </div>
+    </article>
+    
+    <article class="creative-card">
+      <div class="creative-image"><img src="assets/tof/sungsu_visit.jpg" alt="Sungsu Visit TOF 소재 이미지"></div>
+      <div class="creative-body">
+        <div class="creative-top"><span class="rank">03</span><span class="verdict">신뢰형 · 재편집</span></div>
+        <h3>Sungsu Visit</h3>
+        <p class="creative-summary">병원 경험 증거는 분명하지만 TOF 확장 효율은 제한적</p>
+        <div class="mini-kpis">
+          <div><span>광고비</span><strong>24,732원</strong></div>
+          <div><span>ThruPlay</span><strong>1,231</strong></div>
+          <div><span>ThruPlay당</span><strong>20원</strong></div>
+          <div><span>완주율</span><strong>6.5%</strong></div>
+        </div>
+        <div class="interpret"><b>왜 이런 결과인가</b><p>시술 전후와 병원 공간이 직접 등장해 신뢰 증거로는 좋습니다. 그러나 대화형·설명형 구성이 처음 보는 사용자에게는 맥락 진입이 느리고, 완주당 비용이 가장 높아 순수 TOF보다는 관심 고객에게 설명하는 MOF 소재에 더 가깝습니다.</p></div>
+        <div class="action"><b>다음 액션</b><p>TOF에서는 전후 결과와 핵심 한 문장을 첫 2초에 배치한 8~12초 버전으로 재편집하고, 원본 장문 버전은 MOF 리타겟팅에 사용합니다.</p></div>
+      </div>
+    </article>
+    
+    <article class="creative-card">
+      <div class="creative-image"><img src="assets/tof/shori.jpg" alt="Shori TOF 소재 이미지"></div>
+      <div class="creative-body">
+        <div class="creative-top"><span class="rank">04</span><span class="verdict">미집행 · 판단 보류</span></div>
+        <h3>Shori</h3>
+        <p class="creative-summary">등록됐지만 실제 노출·지출이 없어 성과 비교 불가</p>
+        <div class="mini-kpis">
+          <div><span>광고비</span><strong>0원</strong></div>
+          <div><span>ThruPlay</span><strong>0</strong></div>
+          <div><span>ThruPlay당</span><strong>—</strong></div>
+          <div><span>완주율</span><strong>—</strong></div>
+        </div>
+        <div class="interpret"><b>왜 이런 결과인가</b><p>5월 데이터에서 지출, 노출, 조회가 모두 0입니다. 따라서 콘텐츠 품질이 낮다고 해석할 수 없으며, 광고 비활성·중복 광고·예산 미배분·경매 미진입 여부를 먼저 확인해야 합니다.</p></div>
+        <div class="action"><b>다음 액션</b><p>별도 소액 균등 테스트로 최소 10,000회 노출 또는 1,000 ThruPlay를 확보한 후 다른 소재와 비교합니다.</p></div>
+      </div>
+    </article>
+    </div>
+</section>
+
+<section class="section">
+<div class="section-head"><div class="no">03 / DETAIL TABLE</div><div><h2>소재별 세부 지표 비교</h2>
+<p class="lead">비용 지표는 낮을수록, 시청률과 유지율은 높을수록 좋습니다.</p></div></div>
+<div class="table-wrap"><table><thead><tr>
+<th>소재</th><th>광고비</th><th>노출</th><th>CPM</th><th>3초 재생</th><th>3초당 비용</th>
+<th>ThruPlay</th><th>ThruPlay당</th><th>95% 재생</th><th>95%당 비용</th><th>완주율*</th><th>평균 재생</th>
+</tr></thead><tbody>
+    <tr>
+      <td><strong>Rena</strong></td>
+      <td>680,041원</td>
+      <td>156,682</td>
+      <td>4,340원</td>
+      <td>83,302</td>
+      <td>8원</td>
+      <td>38,206</td>
+      <td>18원</td>
+      <td>38,804</td>
+      <td>18원</td>
+      <td>45.9%</td>
+      <td>6.8초</td>
+    </tr>
+    
+    <tr>
+      <td><strong>Hanon</strong></td>
+      <td>59,162원</td>
+      <td>15,867</td>
+      <td>3,729원</td>
+      <td>10,232</td>
+      <td>6원</td>
+      <td>3,432</td>
+      <td>17원</td>
+      <td>1,055</td>
+      <td>56원</td>
+      <td>9.7%</td>
+      <td>13.1초</td>
+    </tr>
+    
+    <tr>
+      <td><strong>Sungsu Visit</strong></td>
+      <td>24,732원</td>
+      <td>5,275</td>
+      <td>4,689원</td>
+      <td>3,278</td>
+      <td>8원</td>
+      <td>1,231</td>
+      <td>20원</td>
+      <td>325</td>
+      <td>76원</td>
+      <td>6.5%</td>
+      <td>12.5초</td>
+    </tr>
+    
+    <tr>
+      <td><strong>Shori</strong></td>
+      <td>0원</td>
+      <td>0</td>
+      <td>—</td>
+      <td>0</td>
+      <td>—</td>
+      <td>0</td>
+      <td>—</td>
+      <td>0</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+    </tr>
+    </tbody></table></div>
+<div class="note" style="margin-top:15px"><strong>*완주율</strong>은 100% 재생 수 ÷ 3초 이상 재생 수로 계산했습니다. 영상 길이가 다르면 절대 비교에 한계가 있으므로 ThruPlay당 비용·95%당 비용과 함께 판단합니다.</div>
+</section>
+
+<section class="section">
+<div class="section-head"><div class="no">04 / KPI LOGIC</div><div><h2>TOF 핵심 지표는 어떻게 도출되는가</h2></div></div>
+<div class="formula-grid">
+<article class="formula"><h3>ThruPlay당 비용</h3><code>광고비 ÷ ThruPlay 수</code><p>15초 이상 또는 영상 끝까지 시청한 1회를 확보하는 비용입니다. 영상 길이가 다른 소재를 비교할 때 Meta의 대표 영상 최적화 지표입니다.</p></article>
+<article class="formula"><h3>3초 조회당 비용</h3><code>광고비 ÷ 3초 이상 재생</code><p>첫 장면과 후킹이 스크롤을 얼마나 저렴하게 멈췄는지 봅니다. 낮지만 완주율이 낮다면 첫 관심만 만들고 내용 전달에는 실패한 것입니다.</p></article>
+<article class="formula"><h3>95% 조회당 비용</h3><code>광고비 ÷ 95% 재생 수</code><p>핵심 메시지를 거의 끝까지 전달한 사용자를 확보하는 비용입니다. 이후 MOF 리타겟팅 풀의 품질을 판단하는 데 유용합니다.</p></article>
+<article class="formula"><h3>ThruPlay율</h3><code>ThruPlay 수 ÷ 노출 수</code><p>노출 중 의미 있는 영상 시청으로 전환된 비율입니다. 도달 효율과 콘텐츠 흡입력을 동시에 반영합니다.</p></article>
+<article class="formula"><h3>완주율</h3><code>100% 재생 수 ÷ 3초 재생 수</code><p>첫 관심을 보인 사람 중 끝까지 남은 비율입니다. 영상 길이와 편집 구조의 영향을 크게 받습니다.</p></article>
+<article class="formula"><h3>CPM</h3><code>광고비 ÷ 노출 × 1,000</code><p>1,000회 노출 비용입니다. 소재 호감도뿐 아니라 타깃 경쟁도와 광고 품질 신호를 함께 반영합니다.</p></article>
+</div>
+</section>
+
+<section class="section">
+<div class="section-head"><div class="no">05 / FINAL DECISION</div><div><h2>소재 운영 결론</h2></div></div>
+<div class="decision">
+<article><h3>1. 확장: Rena</h3><p>대규모 예산에서도 완주당 약 18원을 유지했습니다. 유사 구조의 후속편을 제작해 TOF 메인 볼륨을 담당하게 합니다.</p></article>
+<article><h3>2. 리컷: Hanon</h3><p>첫 조회와 프로필 반응이 좋습니다. 여행 서사를 줄이고 병원·결과 장면을 앞당기면 완주 효율 개선 가능성이 큽니다.</p></article>
+<article><h3>3. 퍼널 이동: Sungsu Visit</h3><p>설명과 신뢰 증거는 좋지만 순수 TOF 완주 효율은 낮습니다. 짧은 결과형은 TOF, 원본은 MOF로 분리합니다.</p></article>
+</div>
+<div class="note" style="margin-top:17px"><strong>Shori 처리</strong> 5월 실제 노출이 없으므로 성과 순위에서 제외합니다. 동일 예산·동일 타깃으로 최소 표본을 확보한 뒤 평가해야 합니다.</div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div class="no">NEXT / MOF</div>
+    <div><h2>다음 상세 분석 · MOF 소재</h2>
+    <p class="lead">TOF에서 형성된 관심이 Doctor Pointer와 3Point를 통해 프로필 검토 행동으로 어떻게 이동했는지 확인합니다.</p></div>
+  </div>
+  <a href="03b_mof_creative_performance.html" style="display:block;background:#F3EEE7;border:1px solid #E2D7C8;border-radius:20px;padding:24px;color:#79664F;font-weight:900">
+    MOF 소재 성과 상세 보기 →
+  </a>
+</section>
+
+</main><footer><div class="wrap">Serene Clinic · Japan TOF Creative Performance · May 2026</div></footer>
+</body></html>

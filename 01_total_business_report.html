@@ -115,17 +115,105 @@ table tbody td,
 }
 /* TABLE_HEADER_CONTRAST_FIX_END */
 
+
+
+
+
+
+
+
+
+
+
+/* SERENE_COMMON_GNB_CSS_START */
+.serene-common-gnb{
+  position:sticky;
+  top:0;
+  z-index:10000;
+  background:rgba(247,247,244,.96);
+  border-bottom:1px solid #deded8;
+  backdrop-filter:blur(16px);
+}
+.serene-common-gnb-inner{
+  max-width:1440px;
+  margin:0 auto;
+  padding:13px 22px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+}
+.serene-common-brand{
+  color:#171717!important;
+  font-size:15px!important;
+  font-weight:950!important;
+  letter-spacing:-.04em;
+  white-space:nowrap;
+  text-decoration:none!important;
+}
+.serene-common-links{
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+  gap:14px;
+  flex-wrap:wrap;
+}
+.serene-common-links a{
+  color:#676767!important;
+  font-size:15px!important;
+  font-weight:700!important;
+  line-height:1.35!important;
+  text-decoration:none!important;
+  padding:0!important;
+  margin:0!important;
+  border-radius:0!important;
+  background:transparent!important;
+}
+.serene-common-links a:hover{color:#171717!important}
+@media(max-width:1040px){
+  .serene-common-gnb-inner{
+    align-items:flex-start;
+    flex-direction:column;
+  }
+  .serene-common-links{
+    justify-content:flex-start;
+    gap:10px 14px;
+  }
+}
+@media(max-width:680px){
+  .serene-common-links a{font-size:13px!important}
+}
+/* SERENE_COMMON_GNB_CSS_END */
+
 </style></head><body>
-<header class="topbar"><nav class="nav">
-<div class="brand">SERENE Monthly Performance</div>
-<div class="links">
-<a href="index.html">HOME</a>
+
+<!-- SERENE_COMMON_GNB_START -->
+<header class="serene-common-gnb">
+  <div class="serene-common-gnb-inner">
+    <a class="serene-common-brand" href="index.html">SERENE Monthly Performance</a>
+    <nav class="serene-common-links" aria-label="세린 월간 성과 리포트 메뉴">
+      <a href="index.html">HOME</a>
 <a href="01_total_business_report.html">세린 전체</a>
 <a href="02_agency_report.html">에이전시</a>
 <a href="03_japan_direct_report.html">일본 다이렉트</a>
 <a href="04_channel_comparison.html">채널 비교</a>
 <a href="05_data_methodology.html">데이터 기준</a>
-</div></nav></header>
+<a href="06_funnel_marketing_necessity_report.html">퍼널 필요성</a>
+    </nav>
+  </div>
+</header>
+<!-- SERENE_COMMON_GNB_END -->
+
+
+
+
+
+
+
+
+
+
+
 
 <main class="wrap">
 <section class="hero"><div class="eyebrow">01 / Total Business</div><h1>세린 전체 사업성과</h1>

@@ -115,17 +115,203 @@ table tbody td,
 }
 /* TABLE_HEADER_CONTRAST_FIX_END */
 
+
+.tof-detail-entry{display:grid;grid-template-columns:1.15fr .85fr;gap:18px;background:#F5EFEC;
+border:1px solid #E7D9D1;border-radius:22px;padding:25px;box-shadow:var(--shadow)}
+.tof-detail-entry h3{font-size:28px;color:#745243;margin:0 0 8px}.tof-detail-entry p{color:#846B61;margin:0}
+.tof-detail-entry .entry-kpis{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}
+.tof-detail-entry .entry-kpis div{background:#fff;border-radius:13px;padding:12px}.tof-detail-entry span{display:block;
+font-size:13px;color:#846B61}.tof-detail-entry strong{font-size:18px}
+.tof-detail-entry .go{display:inline-block;margin-top:16px;padding:10px 15px;border-radius:999px;background:#745243;color:#fff;font-weight:900}
+@media(max-width:800px){.tof-detail-entry{grid-template-columns:1fr}}
+
+
+
+
+
+
+
+
+.mof-detail-entry{display:grid;grid-template-columns:1.15fr .85fr;gap:18px;background:#F3EEE7;
+border:1px solid #E2D7C8;border-radius:22px;padding:25px;box-shadow:var(--shadow)}
+.mof-detail-entry h3{font-size:28px;color:#9A7A52;margin:0 0 8px}
+.mof-detail-entry p{color:#79664F;margin:0}
+.mof-detail-entry .entry-kpis{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}
+.mof-detail-entry .entry-kpis div{background:#fff;border-radius:13px;padding:12px}
+.mof-detail-entry span{display:block;font-size:13px;color:#79664F}
+.mof-detail-entry strong{font-size:18px}
+.mof-detail-entry .go{display:inline-block;margin-top:16px;padding:10px 15px;border-radius:999px;background:#9A7A52;color:#fff;font-weight:900}
+@media(max-width:800px){.mof-detail-entry{grid-template-columns:1fr}}
+
+
+
+
+
+.bof-detail-entry{display:grid;grid-template-columns:1.15fr .85fr;gap:18px;background:#EDF3E9;
+border:1px solid #D6E2D0;border-radius:22px;padding:25px;box-shadow:var(--shadow)}
+.bof-detail-entry h3{font-size:28px;color:#4F6F49;margin:0 0 8px}
+.bof-detail-entry p{color:#64765E;margin:0}
+.bof-detail-entry .entry-kpis{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}
+.bof-detail-entry .entry-kpis div{background:#fff;border-radius:13px;padding:12px}
+.bof-detail-entry span{display:block;font-size:13px;color:#64765E}
+.bof-detail-entry strong{font-size:18px}
+.bof-detail-entry .go{display:inline-block;margin-top:16px;padding:10px 15px;border-radius:999px;background:#4F6F49;color:#fff;font-weight:900}
+@media(max-width:800px){.bof-detail-entry{grid-template-columns:1fr}}
+
+
+/* SERENE_COMMON_GNB_CSS_START */
+.serene-common-gnb{
+  position:sticky;
+  top:0;
+  z-index:10000;
+  background:rgba(247,247,244,.96);
+  border-bottom:1px solid #deded8;
+  backdrop-filter:blur(16px);
+}
+.serene-common-gnb-inner{
+  max-width:1440px;
+  margin:0 auto;
+  padding:13px 22px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+}
+.serene-common-brand{
+  color:#171717!important;
+  font-size:15px!important;
+  font-weight:950!important;
+  letter-spacing:-.04em;
+  white-space:nowrap;
+  text-decoration:none!important;
+}
+.serene-common-links{
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+  gap:14px;
+  flex-wrap:wrap;
+}
+.serene-common-links a{
+  color:#676767!important;
+  font-size:15px!important;
+  font-weight:700!important;
+  line-height:1.35!important;
+  text-decoration:none!important;
+  padding:0!important;
+  margin:0!important;
+  border-radius:0!important;
+  background:transparent!important;
+}
+.serene-common-links a:hover{color:#171717!important}
+@media(max-width:1040px){
+  .serene-common-gnb-inner{
+    align-items:flex-start;
+    flex-direction:column;
+  }
+  .serene-common-links{
+    justify-content:flex-start;
+    gap:10px 14px;
+  }
+}
+@media(max-width:680px){
+  .serene-common-links a{font-size:13px!important}
+}
+/* SERENE_COMMON_GNB_CSS_END */
+
+
+/* JAPAN_SUBNAV_START */
+.japan-subnav-wrap{
+  max-width:1320px;
+  margin:18px auto 0;
+  padding:0 22px;
+}
+.japan-breadcrumb{
+  font-size:13px;
+  color:#777;
+  margin-bottom:10px;
+}
+.japan-subnav{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  padding:8px;
+  background:#ffffff;
+  border:1px solid #deded8;
+  border-radius:16px;
+  box-shadow:0 10px 30px rgba(0,0,0,.05);
+}
+.japan-subnav a{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:40px;
+  padding:9px 16px;
+  border-radius:11px;
+  color:#676767!important;
+  font-size:14px!important;
+  font-weight:800!important;
+  text-decoration:none!important;
+  background:transparent!important;
+}
+.japan-subnav a:hover{
+  color:#171717!important;
+  background:#f3f1ec!important;
+}
+.japan-subnav a.active{
+  color:#ffffff!important;
+  background:#745243!important;
+}
+@media(max-width:680px){
+  .japan-subnav{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+  }
+  .japan-subnav a{
+    width:100%;
+  }
+}
+/* JAPAN_SUBNAV_END */
+
 </style></head><body>
-<header class="topbar"><nav class="nav">
-<div class="brand">SERENE Monthly Performance</div>
-<div class="links">
-<a href="index.html">HOME</a>
+
+<!-- SERENE_COMMON_GNB_START -->
+<header class="serene-common-gnb">
+  <div class="serene-common-gnb-inner">
+    <a class="serene-common-brand" href="index.html">SERENE Monthly Performance</a>
+    <nav class="serene-common-links" aria-label="세린 월간 성과 리포트 메뉴">
+      <a href="index.html">HOME</a>
 <a href="01_total_business_report.html">세린 전체</a>
 <a href="02_agency_report.html">에이전시</a>
 <a href="03_japan_direct_report.html">일본 다이렉트</a>
 <a href="04_channel_comparison.html">채널 비교</a>
 <a href="05_data_methodology.html">데이터 기준</a>
-</div></nav></header>
+<a href="06_funnel_marketing_necessity_report.html">퍼널 필요성</a>
+    </nav>
+  </div>
+</header>
+<!-- SERENE_COMMON_GNB_END -->
+
+<!-- JAPAN_SUBNAV_MARKUP_START -->
+<div class="japan-subnav-wrap">
+  <div class="japan-breadcrumb">일본 다이렉트 &gt; Overview</div>
+  <nav class="japan-subnav" aria-label="일본 다이렉트 세부 메뉴">
+    <a href="03_japan_direct_report.html" class="active" aria-current="page">Overview</a><a href="03a_tof_creative_performance.html">TOF 소재</a><a href="03b_mof_creative_performance.html">MOF 소재</a><a href="03c_bof_creative_performance.html">BOF 소재</a>
+  </nav>
+</div>
+<!-- JAPAN_SUBNAV_MARKUP_END -->
+
+
+
+
+
+
+
+
+
+
+
+
 
 <main class="wrap">
 <section class="hero"><div class="eyebrow">03 / Japan Direct</div><h1>일본 다이렉트 사업성과</h1>
@@ -147,6 +333,57 @@ table tbody td,
 <tr><td>CS</td><td>—</td><td>LPV→문의 / 문의→예약</td><td>4.1% / 21.4%</td><td><span class="status mid">개선 필요</span></td></tr>
 </tbody></table></div></section>
 
+
+<section><div class="section-head"><div class="no">03.2-A / CREATIVE DEPTH</div><div><h2>TOF 소재별 이미지 성과</h2>
+<p class="lead">5월 집행 소재 4개의 ThruPlay·조회당 비용·완주율과 이미지 기반 해석을 별도 상세 페이지에서 확인합니다.</p></div></div>
+<a class="tof-detail-entry" href="03a_tof_creative_performance.html">
+<div><h3>TOF Creative Performance Overview</h3><p>Rena·Hanon·Sungsu Visit·Shori의 실제 이미지와 지표를 한 화면에서 비교합니다.</p>
+<span class="go">상세 페이지 보기 →</span></div>
+<div class="entry-kpis"><div><span>TOF 광고비</span><strong>763,935원</strong></div>
+<div><span>ThruPlay</span><strong>42,869회</strong></div><div><span>최우수 소재</span><strong>Rena</strong></div>
+<div><span>미집행 소재</span><strong>Shori</strong></div></div></a></section>
+
+<section>
+  <div class="section-head">
+    <div class="no">03.2-B / MOF CREATIVE</div>
+    <div><h2>MOF 소재별 이미지 성과</h2>
+    <p class="lead">Doctor Pointer와 3Point의 프로필 방문·CTR·방문당 비용과 메시지 적합성을 비교합니다.</p></div>
+  </div>
+  <a class="mof-detail-entry" href="03b_mof_creative_performance.html">
+    <div>
+      <h3>MOF Creative Performance Overview</h3>
+      <p>2개 카루셀 소재의 이미지, 성과, 메시지 해석과 확장·재검증 판단을 확인합니다.</p>
+      <span class="go">상세 페이지 보기 →</span>
+    </div>
+    <div class="entry-kpis">
+      <div><span>MOF 광고비</span><strong>247,782원</strong></div>
+      <div><span>프로필 방문</span><strong>705회</strong></div>
+      <div><span>최우수 소재</span><strong>Doctor Pointer</strong></div>
+      <div><span>방문당 비용</span><strong>351원</strong></div>
+    </div>
+  </a>
+</section>
+
+<section>
+  <div class="section-head">
+    <div class="no">03.2-C / BOF CREATIVE</div>
+    <div><h2>BOF 소재별 이미지 성과</h2>
+    <p class="lead">GW 이벤트 4장 카루셀을 하나의 소재로 묶어 클릭·LPV·전환 준비도를 분석합니다.</p></div>
+  </div>
+  <a class="bof-detail-entry" href="03c_bof_creative_performance.html">
+    <div>
+      <h3>BOF Creative Performance Overview</h3>
+      <p>GW 한정 캠페인의 4장 구성, 패키지 메시지, 랜딩페이지 도달성과 개선 방향을 확인합니다.</p>
+      <span class="go">상세 페이지 보기 →</span>
+    </div>
+    <div class="entry-kpis">
+      <div><span>소재 광고비</span><strong>172,496원</strong></div>
+      <div><span>링크 클릭</span><strong>372회</strong></div>
+      <div><span>랜딩페이지 조회</span><strong>292회</strong></div>
+      <div><span>LPV당 비용</span><strong>591원</strong></div>
+    </div>
+  </a>
+</section>
 <section><div class="section-head"><div class="no">03.3 / METRIC SECOND</div><div><h2>2차 Report · 광고 지표별 분석</h2></div></div>
 <div class="grid cards-3">
 <div class="card"><h3>소재별</h3><p>광고비·CTR·CPC·LPV·영상조회 기준으로 확대·유지·중단 소재를 분류합니다.</p></div>
