@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>세린·이뻐 일본 마케팅 | 왜 퍼널 마케팅이어야 하는가</title>
+<style>
+:root{
+  --ink:#171717; --muted:#67645f; --line:#dedbd5; --paper:#f5f3ef; --white:#fff;
+  --serene:#2c6b72; --serene-soft:#dcebed;
+  --brand:#8a6854; --brand-soft:#eee3dc;
+  --channel:#6f648b; --channel-soft:#e8e3ef;
+  --content:#9a7446; --content-soft:#f0e7da;
+  --tof:#577b9a; --tof-soft:#dfe9f1;
+  --mof:#9a7a52; --mof-soft:#eee4d7;
+  --bof:#5f7f68; --bof-soft:#e0eae2;
+  --risk:#9a5959; --risk-soft:#f0dfdf;
+  --shadow:0 20px 50px rgba(34,31,28,.08);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Pretendard,-apple-system,BlinkMacSystemFont,"Noto Sans KR","Apple SD Gothic Neo",sans-serif;background:var(--paper);color:var(--ink);line-height:1.65}
+a{color:inherit;text-decoration:none}
+button{font:inherit}
+.shell{display:grid;grid-template-columns:260px minmax(0,1fr);min-height:100vh}
+.nav{position:sticky;top:0;height:100vh;padding:28px 22px;border-right:1px solid var(--line);background:rgba(245,243,239,.94);backdrop-filter:blur(12px);overflow:auto}
+.logo{font-size:12px;letter-spacing:.16em;font-weight:800;color:var(--serene);margin-bottom:8px}
+.nav h1{font-size:18px;line-height:1.35;margin-bottom:18px}
+.nav .meta{font-size:11px;color:var(--muted);padding-bottom:18px;border-bottom:1px solid var(--line);margin-bottom:14px}
+.nav a{display:block;font-size:12px;color:#55514b;padding:7px 9px;border-radius:8px;margin:2px 0}
+.nav a:hover,.nav a.active{background:var(--white);color:var(--serene);font-weight:700}
+.nav-actions{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:18px}
+.nav-actions button{border:1px solid var(--line);background:var(--white);border-radius:8px;padding:8px;font-size:11px;cursor:pointer}
+.main{width:100%;max-width:1440px;margin:0 auto}
+.section{min-height:100vh;padding:76px clamp(28px,5vw,86px);border-bottom:1px solid var(--line);display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden}
+.section.compact{min-height:auto;padding-top:64px;padding-bottom:64px}
+.kicker{font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:800;color:var(--serene);margin-bottom:12px}
+.title{font-size:clamp(36px,5vw,74px);line-height:1.05;letter-spacing:-.045em;max-width:1050px}
+.title em{font-style:normal;color:var(--serene)}
+.lead{font-size:clamp(16px,2vw,22px);max-width:900px;color:#494641;margin-top:24px}
+.small{font-size:12px;color:var(--muted)}
+.grid{display:grid;gap:18px}.g2{grid-template-columns:repeat(2,minmax(0,1fr))}.g3{grid-template-columns:repeat(3,minmax(0,1fr))}.g4{grid-template-columns:repeat(4,minmax(0,1fr))}.g5{grid-template-columns:repeat(5,minmax(0,1fr))}
+.card{background:rgba(255,255,255,.84);border:1px solid var(--line);border-radius:18px;padding:24px;box-shadow:0 8px 20px rgba(30,28,25,.035)}
+.card h3{font-size:18px;margin-bottom:8px}.card p{font-size:14px;color:#57534d}.card strong{color:var(--ink)}
+.num{font-size:11px;letter-spacing:.12em;font-weight:800;color:var(--muted);margin-bottom:22px}
+.quote{font-size:clamp(25px,3vw,44px);font-weight:800;line-height:1.25;letter-spacing:-.03em;max-width:1080px}
+.quote mark{background:linear-gradient(transparent 62%,#d8e8e9 62%);color:inherit}
+.badge{display:inline-flex;align-items:center;padding:5px 10px;border-radius:999px;font-size:11px;font-weight:800;border:1px solid currentColor;margin-bottom:12px}
+.badge.tof{color:var(--tof);background:var(--tof-soft)}.badge.mof{color:var(--mof);background:var(--mof-soft)}.badge.bof{color:var(--bof);background:var(--bof-soft)}
+.hero{background:radial-gradient(circle at 83% 20%,rgba(44,107,114,.14),transparent 33%),linear-gradient(145deg,#fbfaf8 0%,#f0eeea 100%)}
+.hero:after{content:"";position:absolute;right:-110px;bottom:-180px;width:500px;height:500px;border:1px solid rgba(44,107,114,.18);border-radius:50%;box-shadow:0 0 0 70px rgba(44,107,114,.035),0 0 0 140px rgba(44,107,114,.025)}
+.hero .eyebrow{display:flex;gap:8px;flex-wrap:wrap;margin-top:35px}.pill{padding:8px 13px;border-radius:999px;background:var(--white);border:1px solid var(--line);font-size:12px}
+.hero-note{margin-top:46px;display:flex;gap:20px;align-items:center;font-size:12px;color:var(--muted)}.hero-note:before{content:"";width:64px;height:1px;background:var(--serene)}
+.thesis{border-top:5px solid var(--tof)}.anti{border-top:5px solid var(--risk)}.synth{border-top:5px solid var(--serene)}
+.logic-arrow{text-align:center;font-size:34px;color:#aaa;margin:8px 0}
+.big-equation{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap:wrap;margin-top:38px}.eq{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:18px 23px;font-size:18px;font-weight:800}.op{font-size:26px;color:var(--muted)}
+.stack{display:flex;flex-direction:column;gap:8px;margin-top:26px}.layer{display:grid;grid-template-columns:130px 1fr 160px;gap:18px;align-items:center;padding:18px 20px;border-radius:14px;border:1px solid var(--line);background:var(--white)}.layer b{font-size:13px}.layer p{font-size:13px;color:var(--muted)}.layer span{font-size:11px;font-weight:800;text-align:right}
+.layer.brand{border-left:8px solid var(--brand)}.layer.channel{border-left:8px solid var(--channel)}.layer.content{border-left:8px solid var(--content)}.layer.performance{border-left:8px solid var(--tof)}.layer.crm{border-left:8px solid var(--bof)}
+.vector{min-height:190px;position:relative;overflow:hidden}.vector:after{content:"";position:absolute;width:110px;height:110px;border-radius:50%;right:-25px;bottom:-38px;opacity:.18}.vector.v1:after{background:#557b89}.vector.v2:after{background:#a47778}.vector.v3:after{background:#a48958}.vector.v4:after{background:#6c6288}.vector .vname{font-size:24px;font-weight:850;letter-spacing:-.03em}.vector ul{padding-left:18px;margin-top:10px;color:#57534d;font-size:13px}
+.channel-map{display:grid;grid-template-columns:1fr 60px 1.25fr 60px 1fr;align-items:center;margin-top:32px}.node{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:25px;text-align:center}.node.core{border:2px solid var(--serene);box-shadow:var(--shadow)}.node .icon{font-size:28px}.arr{text-align:center;color:#999;font-size:25px}
+.funnel-visual{width:min(850px,100%);margin:40px auto 0}.funnel-row{margin:0 auto 8px;padding:24px 30px;border-radius:15px;text-align:center;border:1px solid var(--line)}.funnel-row h3{font-size:24px}.funnel-row p{font-size:13px;color:#555}.funnel-row.tof{width:100%;background:var(--tof-soft)}.funnel-row.mof{width:74%;background:var(--mof-soft)}.funnel-row.bof{width:48%;background:var(--bof-soft)}
+.stage{border-radius:22px;overflow:hidden;background:var(--white);border:1px solid var(--line)}.stage-head{padding:25px 28px}.stage-body{padding:28px}.stage.tof .stage-head{background:var(--tof-soft)}.stage.mof .stage-head{background:var(--mof-soft)}.stage.bof .stage-head{background:var(--bof-soft)}.stage h2{font-size:34px}.stage .goal{font-size:15px;font-weight:800;margin:18px 0 8px}.stage ul{padding-left:19px;color:#56514c;font-size:14px}.stage li{margin:7px 0}
+.content-preview{display:grid;grid-template-columns:88px 1fr;gap:16px;padding:16px;border-radius:13px;background:#f7f5f2;border:1px solid var(--line);margin-top:14px}.thumb{height:88px;border-radius:12px;display:grid;place-items:center;font-size:30px;background:linear-gradient(145deg,#fff,#e9e5df)}.content-preview b{font-size:14px}.content-preview p{font-size:12px;margin-top:5px}
+.journey{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin-top:32px}.journey-step{position:relative;background:var(--white);border:1px solid var(--line);border-radius:14px;padding:18px 14px;min-height:170px}.journey-step:after{content:"→";position:absolute;right:-12px;top:45%;z-index:2;color:#aaa}.journey-step:last-child:after{display:none}.journey-step .day{font-size:10px;font-weight:800;color:var(--muted)}.journey-step h4{font-size:14px;margin:12px 0 8px}.journey-step p{font-size:12px;color:#666}.journey-step .signal{font-size:10px;font-weight:800;margin-top:14px;padding:4px 7px;border-radius:6px;background:var(--paper);display:inline-block}
+table{width:100%;border-collapse:separate;border-spacing:0;background:var(--white);border:1px solid var(--line);border-radius:16px;overflow:hidden;font-size:13px}th,td{padding:14px 15px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}th{font-size:11px;background:#ebe8e2;color:#5d5953}tr:last-child td{border-bottom:none}.row-tof td:first-child{border-left:6px solid var(--tof)}.row-mof td:first-child{border-left:6px solid var(--mof)}.row-bof td:first-child{border-left:6px solid var(--bof)}
+.kpi{display:flex;align-items:flex-end;gap:10px;height:240px;padding:25px;background:var(--white);border:1px solid var(--line);border-radius:18px}.bar{flex:1;border-radius:9px 9px 3px 3px;position:relative;min-width:40px}.bar span{position:absolute;left:50%;transform:translateX(-50%);bottom:-28px;font-size:11px;white-space:nowrap}.bar b{position:absolute;left:50%;transform:translateX(-50%);top:-27px;font-size:12px}.bar:nth-child(1){height:92%;background:var(--tof)}.bar:nth-child(2){height:65%;background:var(--mof)}.bar:nth-child(3){height:42%;background:var(--bof)}.bar:nth-child(4){height:18%;background:var(--serene)}
+.formula{background:#1f2b2e;color:white;border-radius:20px;padding:28px;font-size:clamp(20px,3vw,38px);font-weight:850;letter-spacing:-.03em;text-align:center;margin-top:28px}.formula small{display:block;font-size:12px;font-weight:400;color:#c8d8da;margin-top:9px}
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:30px}.week{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:20px}.week .w{font-size:11px;font-weight:850;color:var(--serene)}.week h3{font-size:17px;margin:8px 0}.week p{font-size:12px;color:var(--muted)}
+.warning{background:var(--risk-soft);border:1px solid #d9bcbc;border-radius:18px;padding:24px}.warning h3{color:#7b4141}.check{background:var(--bof-soft);border:1px solid #bfd0c2;border-radius:18px;padding:24px}.check h3{color:#45634d}
+.final{background:linear-gradient(145deg,#1c2b2e,#2d464a);color:white}.final .kicker{color:#afd0d4}.final .lead{color:#d8e3e4}.final .card{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.18);box-shadow:none}.final .card p{color:#d6e0e1}.final .card h3{color:white}
+.footer{font-size:11px;color:var(--muted);padding:24px clamp(28px,5vw,86px);display:flex;justify-content:space-between}
+@media(max-width:980px){.shell{display:block}.nav{position:relative;width:100%;height:auto;border-right:none;border-bottom:1px solid var(--line)}.nav nav{display:none}.g3,.g4,.g5{grid-template-columns:repeat(2,minmax(0,1fr))}.journey{grid-template-columns:repeat(2,1fr)}.channel-map{grid-template-columns:1fr}.arr{transform:rotate(90deg)}.layer{grid-template-columns:1fr}.layer span{text-align:left}.timeline{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.section{padding:54px 20px;min-height:auto}.g2,.g3,.g4,.g5,.timeline{grid-template-columns:1fr}.journey{grid-template-columns:1fr}.journey-step:after{content:"↓";right:50%;top:auto;bottom:-20px}.funnel-row.mof{width:86%}.funnel-row.bof{width:68%}.title{font-size:40px}table{font-size:11px}th,td{padding:10px}.footer{display:block}}
+@media print{.nav{display:none}.shell{display:block}.section{min-height:100vh;page-break-after:always;padding:45px}.section.compact{min-height:100vh}.main{max-width:none}.nav-actions{display:none}body{background:white}.card,.node,.stage,table,.kpi{box-shadow:none}.footer{display:none}}
+
+
+/* 2026-06-15 readability upgrade: body copy scaled to at least 120% */
+body{font-size:17px;line-height:1.78}
+.nav{width:auto}
+.nav h1{font-size:21px}
+.nav .meta{font-size:13px;line-height:1.65}
+.nav a{font-size:14px;padding:8px 10px}
+.nav-actions button{font-size:13px;padding:9px}
+.section{overflow:visible}
+.kicker,.num{font-size:13px}
+.lead{font-size:clamp(19px,2.15vw,26px);line-height:1.7}
+.small{font-size:15px;line-height:1.7}
+.card{padding:28px}
+.card h3{font-size:21px;line-height:1.45}
+.card p{font-size:17px;line-height:1.75}
+.badge{font-size:13px;padding:6px 11px}
+.pill{font-size:15px}
+.hero-note{font-size:15px}
+.eq{font-size:21px}
+.layer b{font-size:16px}.layer p{font-size:16px}.layer span{font-size:14px}
+.vector ul{font-size:16px;line-height:1.75}.vector .vname{font-size:27px}
+.node h3{font-size:20px}.node p{font-size:16px;line-height:1.7}
+.funnel-row p{font-size:16px}.funnel-row h3{font-size:27px}
+.stage .goal{font-size:18px}.stage p{font-size:17px}.stage ul{font-size:17px;line-height:1.7}
+.content-preview b{font-size:17px}.content-preview p{font-size:15px;line-height:1.65}
+.journey-step .day{font-size:13px}.journey-step h4{font-size:17px}.journey-step p{font-size:15px;line-height:1.65}.journey-step .signal{font-size:13px}
+table{font-size:16px}th{font-size:14px}th,td{padding:17px 18px;line-height:1.65}
+.bar span{font-size:14px}.bar b{font-size:15px}
+.formula small{font-size:15px;line-height:1.6}
+.week .w{font-size:13px}.week h3{font-size:20px}.week p{font-size:15px;line-height:1.7}
+.warning p,.check p{font-size:17px;line-height:1.75}
+.footer{font-size:13px}
+
+/* Evidence page */
+.evidence-intro{max-width:1050px;font-size:20px;line-height:1.75;color:#494641;margin-top:20px}
+.evidence-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:30px}
+.evidence-card{background:rgba(255,255,255,.92);border:1px solid var(--line);border-radius:18px;padding:27px;display:flex;flex-direction:column;min-height:310px;box-shadow:0 8px 20px rgba(30,28,25,.035)}
+.evidence-card .source-type{font-size:13px;font-weight:850;letter-spacing:.08em;color:var(--serene);margin-bottom:10px}
+.evidence-card h3{font-size:22px;line-height:1.42;margin-bottom:11px}
+.evidence-card p{font-size:16px;line-height:1.75;color:#57534d}
+.evidence-card .finding{margin-top:14px;padding:14px 16px;background:#f3f1ed;border-left:4px solid var(--serene);border-radius:8px;font-size:16px;line-height:1.7}
+.evidence-card .implication{margin-top:12px;font-size:15px;color:#625e58}
+.evidence-links{display:flex;gap:9px;flex-wrap:wrap;margin-top:auto;padding-top:20px}
+.outlink{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--serene);color:var(--serene);background:#fff;padding:9px 13px;border-radius:9px;font-size:14px;font-weight:800;transition:.18s ease}
+.outlink:hover{background:var(--serene);color:#fff;transform:translateY(-1px)}
+.evidence-note{margin-top:22px;padding:20px 22px;border:1px solid #d8cfc4;background:#f1ebe4;border-radius:14px;font-size:16px;line-height:1.75;color:#544f49}
+@media(max-width:900px){.evidence-grid{grid-template-columns:1fr}}
+
+
+/* GLOBAL_GNB_V2_START */
+.global-gnb{
+  position:sticky;
+  top:0;
+  z-index:9998;
+  background:rgba(247,247,244,.94);
+  border-bottom:1px solid #deded8;
+  backdrop-filter:blur(16px);
+}
+.global-gnb-inner{
+  max-width:1440px;
+  margin:0 auto;
+  padding:13px 22px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+}
+.global-brand{
+  color:#171717;
+  font-size:15px;
+  font-weight:950;
+  letter-spacing:-.04em;
+  white-space:nowrap;
+  text-decoration:none;
+}
+.global-links{
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+  gap:14px;
+  flex-wrap:wrap;
+}
+.global-links a{
+  color:#676767;
+  font-size:15px;
+  font-weight:700;
+  text-decoration:none;
+}
+.global-links a:hover{color:#171717}
+@media(max-width:900px){
+  .global-gnb-inner{align-items:flex-start;flex-direction:column}
+  .global-links{justify-content:flex-start;gap:10px 14px}
+}
+@media(max-width:640px){
+  .global-links a{font-size:13px}
+}
+/* GLOBAL_GNB_V2_END */
+
+/* FUNNEL_PAGE_THEME_START */
+:root{
+  --funnel-page-title:#6E5F3F;
+  --funnel-page-subtitle:#7C715A;
+  --funnel-page-soft:#F4F0E6;
+  --funnel-page-border:#E3DAC2;
+  --funnel-page-tag:#E9E0C9;
+}
+.global-gnb{position:sticky;top:0}
+.shell{min-height:calc(100vh - 58px)}
+.nav{top:58px;height:calc(100vh - 58px)}
+.nav .logo,.kicker{color:var(--funnel-page-title)}
+.nav a:hover,.nav a.active{color:var(--funnel-page-title)}
+.hero{background:
+  radial-gradient(circle at 83% 20%,rgba(110,95,63,.13),transparent 33%),
+  linear-gradient(145deg,#fbfaf7 0%,#f2eee4 100%)}
+.title em{color:var(--funnel-page-title)}
+.hero-note:before{background:var(--funnel-page-title)}
+.evidence-card .source-type{color:var(--funnel-page-title)}
+.evidence-card .finding{border-left-color:var(--funnel-page-title)}
+.outlink{border-color:var(--funnel-page-title);color:var(--funnel-page-title)}
+.outlink:hover{background:var(--funnel-page-title);color:#fff}
+.nav .meta{border-bottom-color:var(--funnel-page-border)}
+.card{border-color:var(--funnel-page-border)}
+/* FUNNEL_PAGE_THEME_END */
+
+</style>
+</head>
+<body>
+
+<header class="global-gnb">
+  <div class="global-gnb-inner">
+    <a class="global-brand" href="index.html">SERENE Monthly Performance</a>
+    <nav class="global-links" aria-label="월간 리포트 메뉴">
+      <a href="index.html">HOME</a>
+      <a href="01_total_business_report.html">세린 전체</a>
+      <a href="02_agency_report.html">에이전시</a>
+      <a href="03_japan_direct_report.html">일본 다이렉트</a>
+      <a href="04_channel_comparison.html">채널 비교</a>
+      <a href="05_data_methodology.html">데이터 기준</a>
+      <a href="06_funnel_marketing_necessity_report.html">퍼널 필요성</a>
+    </nav>
+  </div>
+</header>
+
+<div class="shell">
+<aside class="nav">
+  <div class="logo">SERENE × IPPEO</div>
+  <h1>왜 퍼널 마케팅이어야 하는가</h1>
+  <div class="meta">일본 환자 유치 인식 개선 REPORT<br>세린 2026년 5월 리포트 · 섹션 06</div>
+  <nav id="toc">
+    <a href="#s0">00. 표지</a><a href="#s1">01. 결론</a><a href="#s2">02. 정·반·합</a><a href="#s3">03. 노출 중심의 한계</a><a href="#s4">04. 통합 구조</a><a href="#s5">05. 브랜드 벡터</a><a href="#s6">06. 브랜드 채널</a><a href="#s7">07. 콘텐츠 시스템</a><a href="#s8">08. 퍼널 원리</a><a href="#s9">09. TOF</a><a href="#s10">10. MOF</a><a href="#s11">11. BOF</a><a href="#s12">12. 환자 여정</a><a href="#s13">13. 콘텐츠 매트릭스</a><a href="#s14">14. KPI</a><a href="#s15">15. 실행 로드맵</a><a href="#s16">16. 리스크</a><a href="#s17">17. 근거 자료</a><a href="#s18">18. 최종 메시지</a>
+  </nav>
+  <div class="nav-actions"><button onclick="location.href='index.html'">게이트 이동</button><button onclick="window.print()">PDF 저장</button><button onclick="document.documentElement.requestFullscreen?.()">전체 화면</button></div>
+</aside>
+<main class="main">
+<section id="s0" class="section hero">
+  <div class="kicker">Funnel Marketing Necessity Report</div>
+  <h1 class="title">병원 마케팅은<br><em>노출을 사는 일</em>이 아니라<br>신뢰가 전환되는 <em>경로를 설계</em>하는 일이다.</h1>
+  <p class="lead">세린의원과 이뻐 일본 마케팅에 공통 적용되는 브랜드-채널-콘텐츠-광고-CRM 통합 구조</p>
+  <div class="eyebrow"><span class="pill">신규 병원 오픈</span><span class="pill">일본 환자 유치</span><span class="pill">Meta TOF·MOF·BOF</span><span class="pill">LINE 상담 전환</span></div>
+  <div class="hero-note">본 보고서의 목적은 “왜 퍼널이 필요한가”를 이해시키는 것입니다.</div>
+</section>
+
+<section id="s1" class="section">
+  <div class="num">01 / EXECUTIVE CONCLUSION</div><div class="kicker">핵심 결론</div>
+  <p class="quote">신규 병원이 실패하는 이유는 광고가 부족해서가 아니라, <mark>환자가 병원을 믿게 되는 중간 단계가 비어 있기 때문</mark>이다.</p>
+  <div class="big-equation"><div class="eq">브랜드 이유</div><div class="op">×</div><div class="eq">채널 증거</div><div class="op">×</div><div class="eq">퍼널 콘텐츠</div><div class="op">×</div><div class="eq">반복 노출</div><div class="op">=</div><div class="eq" style="border-color:var(--serene);color:var(--serene)">상담 전환</div></div>
+  <p class="lead">따라서 퍼널 마케팅은 광고 기법이 아니라, 낯선 해외 환자를 <strong>인지 → 이해 → 신뢰 → 행동</strong>으로 이동시키는 운영 시스템입니다.</p>
+</section>
+
+<section id="s2" class="section">
+  <div class="num">02 / DIALECTIC</div><div class="kicker">정·반·합으로 이해하는 퍼널의 당위성</div>
+  <div class="grid g3" style="margin-top:30px">
+    <article class="card thesis"><div class="badge tof">정 Thesis</div><h3>노출이 많으면 환자가 온다</h3><p>신규 오픈 초기에는 도달, 조회수, 팔로워 증가가 가장 먼저 보입니다. 그래서 “많이 보여주기”가 마케팅의 전부처럼 보입니다.</p></article>
+    <article class="card anti"><div class="badge" style="color:var(--risk);background:var(--risk-soft)">반 Antithesis</div><h3>노출은 관심과 예약을 보장하지 않는다</h3><p>의료 선택은 고관여 의사결정입니다. 환자는 가격·의료진·후기·안전·소통을 여러 번 검증한 뒤 행동합니다.</p></article>
+    <article class="card synth"><div class="badge" style="color:var(--serene);background:var(--serene-soft)">합 Synthesis</div><h3>노출을 신뢰의 순서로 연결해야 한다</h3><p>브랜드 기반 콘텐츠를 단계별로 다르게 노출하고, 행동 데이터로 재접촉할 때 광고비가 상담 자산으로 축적됩니다.</p></article>
+  </div>
+  <div class="formula">노출량이 아니라 “다음 행동으로 이동한 사람의 비율”이 마케팅 성과다.<small>Reach → View → Profile → Save → LINE → Consultation → Reservation</small></div>
+</section>
+
+<section id="s3" class="section">
+  <div class="num">03 / PROBLEM DEFINITION</div><div class="kicker">노출 중심 마케팅의 구조적 한계</div>
+  <h2 class="quote">하나의 광고가 “처음 본 사람”과 “예약 직전 사람”에게 같은 말을 하면, 어느 쪽도 설득하지 못한다.</h2>
+  <div class="grid g4" style="margin-top:34px">
+    <div class="card"><h3>① 메시지 불일치</h3><p>처음 본 환자에게 즉시 예약을 요구하면 부담이 커지고, 예약 직전 환자에게 브랜드 소개만 반복하면 행동이 지연됩니다.</p></div>
+    <div class="card"><h3>② 알고리즘 신호 혼선</h3><p>조회·클릭·상담을 하나의 캠페인에 혼합하면 Meta가 어떤 행동을 최적화해야 하는지 학습하기 어렵습니다.</p></div>
+    <div class="card"><h3>③ 브랜드 자산 미축적</h3><p>프로모션 광고만 집행하면 할인 종료와 함께 성과도 사라집니다. 환자 기억에 남는 선택 이유가 축적되지 않습니다.</p></div>
+    <div class="card"><h3>④ 재접촉 불가능</h3><p>픽셀·영상 시청자·프로필 방문자·LINE 행동이 연결되지 않으면 관심 고객을 다시 만날 수 없습니다.</p></div>
+  </div>
+  <div class="grid g2" style="margin-top:18px"><div class="warning"><h3>잘못된 질문</h3><p>“이번 광고에서 예약이 몇 건 나왔나?”</p></div><div class="check"><h3>올바른 질문</h3><p>“각 단계에서 다음 단계로 몇 %가 이동했고, 어디에서 이탈했나?”</p></div></div>
+</section>
+
+<section id="s4" class="section">
+  <div class="num">04 / OPERATING ARCHITECTURE</div><div class="kicker">신규 병원 마케팅의 5개 레이어</div>
+  <h2 class="quote">퍼포먼스 광고는 시작점이 아니라 <mark>완성된 구조를 증폭하는 레이어</mark>다.</h2>
+  <div class="stack">
+    <div class="layer brand"><b>1. 브랜드 전략</b><p>환자가 이 병원을 선택해야 하는 이유를 실용성·심미성·가격·철학으로 정의</p><span>WHY</span></div>
+    <div class="layer channel"><b>2. 브랜드 채널</b><p>Instagram·홈페이지·LINE·Tribeau 등에서 동일한 가치와 증거를 반복 확인</p><span>WHERE</span></div>
+    <div class="layer content"><b>3. 콘텐츠 시스템</b><p>브랜드 가치와 환자 불안을 단계별 콘텐츠 포맷으로 변환</p><span>WHAT</span></div>
+    <div class="layer performance"><b>4. 퍼포먼스 광고</b><p>TOF·MOF·BOF별 목표·타깃·소재·최적화 이벤트를 분리하여 배포</p><span>HOW</span></div>
+    <div class="layer crm"><b>5. CRM·데이터</b><p>광고-프로필-LINE-상담-예약-매출 데이터를 연결하고 반복 개선</p><span>LEARN</span></div>
+  </div>
+</section>
+
+<section id="s5" class="section">
+  <div class="num">05 / BRAND VECTOR</div><div class="kicker">브랜드는 4개의 선택 이유를 제공해야 한다</div>
+  <div class="grid g4" style="margin-top:30px">
+    <div class="card vector v1"><div class="vname">실용성</div><p>무엇을 해결하는가</p><ul><li>통증·회복·동선</li><li>일본어 상담</li><li>사후관리 체계</li></ul></div>
+    <div class="card vector v2"><div class="vname">심미성</div><p>어떤 결과를 지향하는가</p><ul><li>디자인 철학</li><li>전후 사례</li><li>원장 미감</li></ul></div>
+    <div class="card vector v3"><div class="vname">가격</div><p>비용의 이유가 납득되는가</p><ul><li>가격 범위</li><li>포함 항목</li><li>가치 대비 비용</li></ul></div>
+    <div class="card vector v4"><div class="vname">철학</div><p>어떤 태도로 진료하는가</p><ul><li>과잉진료 방지</li><li>안전 기준</li><li>환자 선택권</li></ul></div>
+  </div>
+  <p class="lead">콘텐츠는 이 4가지 중 하나 이상의 브랜드 벡터를 증명해야 합니다. 단순한 예쁜 이미지나 이벤트 가격은 브랜드가 아니라 정보 조각에 불과합니다.</p>
+</section>
+
+<section id="s6" class="section">
+  <div class="num">06 / CHANNEL SYSTEM</div><div class="kicker">브랜드 채널은 “검증 공간”이다</div>
+  <div class="channel-map">
+    <div class="node"><div class="icon">📣</div><h3>광고 접점</h3><p>Instagram Reels<br>Stories · Feed</p></div><div class="arr">→</div>
+    <div class="node core"><div class="icon">🏥</div><h3>브랜드 허브</h3><p>Instagram Profile<br>Homepage · Landing</p></div><div class="arr">→</div>
+    <div class="node"><div class="icon">💬</div><h3>전환 접점</h3><p>LINE 상담<br>예약 · CRM</p></div>
+  </div>
+  <div class="grid g3" style="margin-top:25px">
+    <div class="card"><h3>광고는 약속한다</h3><p>“이 병원은 이런 문제를 이해하고 해결할 수 있다.”</p></div><div class="card"><h3>채널은 증명한다</h3><p>의료진·사례·가격·철학·후기·사후관리로 약속의 근거를 제시합니다.</p></div><div class="card"><h3>LINE은 행동을 낮춘다</h3><p>예약이 아니라 질문부터 시작하게 하여 심리적 진입 장벽을 낮춥니다.</p></div>
+  </div>
+</section>
+
+<section id="s7" class="section">
+  <div class="num">07 / CONTENT OPERATING SYSTEM</div><div class="kicker">콘텐츠는 같은 주제를 깊이만 다르게 말한다</div>
+  <table style="margin-top:28px"><thead><tr><th>브랜드 주제</th><th>TOF: 발견</th><th>MOF: 검토</th><th>BOF: 행동</th></tr></thead><tbody>
+  <tr><td><strong>실용성</strong></td><td>“한국 시술 전 체크할 3가지”</td><td>일본어 상담·내원 동선·회복 일정 상세</td><td>LINE으로 일정·가능 시술 확인</td></tr>
+  <tr><td><strong>심미성</strong></td><td>결과 분위기·원장 미감 숏폼</td><td>전후 사례와 디자인 기준 설명</td><td>내 얼굴 기준 1:1 가능성 문의</td></tr>
+  <tr><td><strong>가격</strong></td><td>가격보다 확인해야 할 포함 항목</td><td>시술별 범위·추가 비용·가치 비교</td><td>개인별 견적과 프로모션 확인</td></tr>
+  <tr><td><strong>철학</strong></td><td>“결정하지 않아도 되는 상담”</td><td>과잉진료 방지·안전 기준·원장 인터뷰</td><td>부담 없는 사전상담 CTA</td></tr></tbody></table>
+  <p class="lead">핵심은 콘텐츠를 많이 만드는 것이 아니라, 환자의 질문 순서에 맞게 <strong>정보 깊이와 CTA 강도</strong>를 조절하는 것입니다.</p>
+</section>
+
+<section id="s8" class="section">
+  <div class="num">08 / FUNNEL PRINCIPLE</div><div class="kicker">TOF·MOF·BOF의 작동 원리</div>
+  <div class="funnel-visual">
+    <div class="funnel-row tof"><h3>TOF · 인식</h3><p>아직 병원을 모르는 사람에게 문제와 브랜드를 처음 연결</p></div>
+    <div class="funnel-row mof"><h3>MOF · 신뢰</h3><p>관심 행동을 보인 사람에게 선택 기준과 증거를 제공</p></div>
+    <div class="funnel-row bof"><h3>BOF · 전환</h3><p>이미 검토한 사람의 마지막 불안과 행동 장벽을 제거</p></div>
+  </div>
+  <div class="formula">사람을 좁히는 것이 아니라, 메시지를 구체화하는 구조다.<small>Audience becomes warmer, message becomes deeper, CTA becomes stronger.</small></div>
+</section>
+
+<section id="s9" class="section compact">
+  <div class="stage tof"><div class="stage-head"><div class="badge tof">09 / TOP OF FUNNEL</div><h2>TOF — “처음 보지만, 기억나는 병원”</h2></div><div class="stage-body grid g2">
+    <div><div class="goal">목표</div><p>대규모 신규 타깃에게 문제 인식과 브랜드 첫 기억을 형성합니다.</p><div class="goal">추천 최적화</div><ul><li>도달·동영상 조회·ThruPlay</li><li>넓은 지역·연령, 과도한 관심사 제한 최소화</li><li>영상 시청자 풀을 MOF 자산으로 축적</li></ul></div>
+    <div><div class="content-preview"><div class="thumb">🎬</div><div><b>증상·고민 공감 릴스</b><p>“사진을 찍을 때 유독 신경 쓰이는 이유”처럼 자기 인식을 만드는 콘텐츠</p></div></div><div class="content-preview"><div class="thumb">✨</div><div><b>브랜드 무드·결과 분위기</b><p>시술명을 강하게 판매하기보다 병원이 지향하는 미감과 태도를 각인</p></div></div><div class="content-preview"><div class="thumb">🧭</div><div><b>한국 의료 선택 가이드</b><p>낯선 해외 의료에 대한 기본 질문과 안전 체크리스트 제공</p></div></div></div>
+  </div></div>
+</section>
+
+<section id="s10" class="section compact">
+  <div class="stage mof"><div class="stage-head"><div class="badge mof">10 / MIDDLE OF FUNNEL</div><h2>MOF — “검토할 이유가 충분한 병원”</h2></div><div class="stage-body grid g2">
+    <div><div class="goal">목표</div><p>영상 시청·프로필 방문·콘텐츠 반응을 보인 환자에게 비교 기준과 증거를 제공합니다.</p><div class="goal">추천 최적화</div><ul><li>프로필 방문·랜딩페이지 조회·참여</li><li>영상 50~95% 시청자, IG 참여자, 웹 방문자</li><li>저장·프로필 방문·상세 조회를 BOF 자산으로 축적</li></ul></div>
+    <div><div class="content-preview"><div class="thumb">👨‍⚕️</div><div><b>의료진 전문성·철학</b><p>경력 나열보다 진단 기준, 하지 않는 시술, 안전 원칙을 설명</p></div></div><div class="content-preview"><div class="thumb">↔️</div><div><b>전후 사례의 해석</b><p>사진만 제시하지 않고 왜 이 디자인을 선택했는지 설명</p></div></div><div class="content-preview"><div class="thumb">🗂️</div><div><b>가격·과정·사후관리</b><p>방문 전 예상 가능한 정보를 제공하여 불확실성을 낮춤</p></div></div></div>
+  </div></div>
+</section>
+
+<section id="s11" class="section compact">
+  <div class="stage bof"><div class="stage-head"><div class="badge bof">11 / BOTTOM OF FUNNEL</div><h2>BOF — “지금 질문해도 안전한 병원”</h2></div><div class="stage-body grid g2">
+    <div><div class="goal">목표</div><p>검토를 마친 환자의 마지막 불안, 귀찮음, 결정 부담을 제거하고 LINE 상담을 시작시킵니다.</p><div class="goal">추천 최적화</div><ul><li>LINE 클릭·리드·예약 이벤트</li><li>프로필 방문자, 웹 방문자, 저장·DM·고조회 시청자</li><li>기존 상담자·예약자·최근 전환자는 제외</li></ul></div>
+    <div><div class="content-preview"><div class="thumb">💬</div><div><b>상담 진입 장벽 완화</b><p>“결정하지 않아도 괜찮습니다. 일정과 가능 여부만 확인하세요.”</p></div></div><div class="content-preview"><div class="thumb">⏳</div><div><b>기간·잔여 일정 리마인드</b><p>과장된 긴급성보다 실제 상담 가능 일정과 혜택 종료일을 명확히 안내</p></div></div><div class="content-preview"><div class="thumb">🛡️</div><div><b>불안 제거 FAQ</b><p>통역·회복·부작용·환불·사후관리 등 예약 직전 질문에 답변</p></div></div></div>
+  </div></div>
+</section>
+
+<section id="s12" class="section">
+  <div class="num">12 / CUSTOMER JOURNEY</div><div class="kicker">한 명의 일본 환자가 상담까지 이동하는 실제 흐름</div>
+  <div class="journey">
+    <div class="journey-step"><div class="day">DAY 1 · TOF</div><h4>릴스 첫 노출</h4><p>“내 고민과 비슷하다”는 자기 관련성을 느낌</p><span class="signal">3초·25% 시청</span></div>
+    <div class="journey-step"><div class="day">DAY 3 · TOF</div><h4>두 번째 노출</h4><p>병원명과 분위기가 더 이상 낯설지 않음</p><span class="signal">50% 시청</span></div>
+    <div class="journey-step"><div class="day">DAY 5 · MOF</div><h4>체크리스트 확인</h4><p>비교 기준을 얻고 프로필을 방문</p><span class="signal">프로필 방문</span></div>
+    <div class="journey-step"><div class="day">DAY 5 · MOF</div><h4>의료진·사례 검토</h4><p>저장했지만 일정과 비용이 걱정되어 이탈</p><span class="signal">저장·웹 조회</span></div>
+    <div class="journey-step"><div class="day">DAY 8 · BOF</div><h4>FAQ 리타겟</h4><p>일본어 상담·회복·사후관리 불안이 해소됨</p><span class="signal">LINE 클릭</span></div>
+    <div class="journey-step"><div class="day">DAY 8 · CRM</div><h4>상담 시작</h4><p>예약 강요가 아닌 일정·적합성 확인으로 대화 시작</p><span class="signal">상담 → 예약</span></div>
+  </div>
+  <p class="lead">마지막 BOF 광고가 전환을 만들었지만, 실제 원인은 그 이전의 반복된 TOF·MOF 신뢰 형성입니다. 따라서 마지막 클릭만으로 광고 성과를 판단하면 안 됩니다.</p>
+</section>
+
+<section id="s13" class="section">
+  <div class="num">13 / CONTENT MATRIX</div><div class="kicker">퍼널별 콘텐츠 릴리즈 가이드</div>
+  <table style="margin-top:28px"><thead><tr><th>퍼널</th><th>환자 질문</th><th>콘텐츠 유형</th><th>권장 CTA</th><th>핵심 지표</th></tr></thead><tbody>
+    <tr class="row-tof"><td><strong>TOF</strong></td><td>“이게 내 고민인가?”</td><td>숏폼, 고민 공감, 트렌드, 원장 미감, 브랜드 무드</td><td>더 보기·프로필 확인</td><td>CPM, 3초/ThruPlay, 25~95% 조회율</td></tr>
+    <tr class="row-mof"><td><strong>MOF</strong></td><td>“이 병원을 믿을 수 있나?”</td><td>전후 사례 해석, 원장 철학, 안전 기준, 가격 구조, 과정 가이드</td><td>저장·프로필·상세 페이지</td><td>CTR, 프로필 방문률, 저장률, 랜딩 조회</td></tr>
+    <tr class="row-bof"><td><strong>BOF</strong></td><td>“지금 문의해도 괜찮나?”</td><td>FAQ, 후기, 일정, 혜택, 일본어 상담, 사후관리, 불안 제거</td><td>LINE 상담·예약 확인</td><td>LINE 클릭률, 상담 시작률, 예약률, CPA</td></tr>
+  </tbody></table>
+  <div class="grid g3" style="margin-top:20px"><div class="card"><h3>릴리즈 비중 예시</h3><p><strong>TOF 45% · MOF 35% · BOF 20%</strong><br>브랜드 초기에는 인지 콘텐츠를 충분히 축적합니다.</p></div><div class="card"><h3>콘텐츠 재활용</h3><p>하나의 원장 인터뷰를 TOF 15초 핵심 문장, MOF 60초 설명, BOF FAQ 카드로 분해합니다.</p></div><div class="card"><h3>운영 원칙</h3><p>광고용 콘텐츠와 유기적 채널 콘텐츠를 분리하지 말고, 프로필 검증 경험까지 연결합니다.</p></div></div>
+</section>
+
+<section id="s14" class="section">
+  <div class="num">14 / KPI & DATA</div><div class="kicker">성과는 퍼널별로 측정해야 한다</div>
+  <div class="grid g2" style="margin-top:28px">
+    <div><div class="kpi"><div class="bar"><b>100,000</b><span>도달</span></div><div class="bar"><b>20,000</b><span>관심 시청</span></div><div class="bar"><b>2,000</b><span>검토 행동</span></div><div class="bar"><b>120</b><span>LINE 상담</span></div></div><p class="small" style="margin-top:42px">※ 이해를 위한 예시 수치이며 실제 목표는 기존 데이터와 예산을 기준으로 설정</p></div>
+    <div class="card"><h3>퍼널 KPI 트리</h3><p><strong>TOF</strong> CPM · Reach · Frequency · 영상 조회율</p><p style="margin-top:10px"><strong>MOF</strong> CTR · 프로필 방문률 · 저장률 · LPV</p><p style="margin-top:10px"><strong>BOF</strong> LINE 클릭률 · 상담 시작률 · 예약률 · CPA</p><p style="margin-top:10px"><strong>Business</strong> 예약 매출 · 객단가 · ROAS · 환자 LTV</p></div>
+  </div>
+  <div class="formula">광고 ID + UTM + LINE 유입코드 + 상담코드 + 예약/매출 = 개선 가능한 퍼널<small>데이터가 연결되지 않으면 성과가 아니라 추측만 남는다.</small></div>
+</section>
+
+<section id="s15" class="section">
+  <div class="num">15 / EXECUTION ROADMAP</div><div class="kicker">신규 병원 오픈 90일 실행 순서</div>
+  <div class="timeline">
+    <div class="week"><div class="w">01 · 1~2주</div><h3>브랜드 정의</h3><p>4대 브랜드 벡터, 핵심 타깃, 환자 JTBD, 금지 메시지 확정</p></div>
+    <div class="week"><div class="w">02 · 2~4주</div><h3>채널 구축</h3><p>Instagram 프로필·핀 콘텐츠·하이라이트·홈페이지·LINE 구조 완성</p></div>
+    <div class="week"><div class="w">03 · 3~6주</div><h3>콘텐츠 자산</h3><p>TOF 12개, MOF 9개, BOF 6개 기준 초기 자산 풀 구축</p></div>
+    <div class="week"><div class="w">04 · 5~8주</div><h3>광고 학습</h3><p>TOF부터 데이터 풀을 만들고 MOF·BOF 타깃을 순차 활성화</p></div>
+    <div class="week"><div class="w">05 · 6~10주</div><h3>CRM 연결</h3><p>UTM·LINE 유입코드·상담 사유·예약·매출 필드 연결</p></div>
+    <div class="week"><div class="w">06 · 8~12주</div><h3>퍼널 개선</h3><p>이탈 구간별 소재·랜딩·상담 스크립트 A/B 테스트</p></div>
+    <div class="week"><div class="w">07 · 상시</div><h3>콘텐츠 리사이클</h3><p>성과 소재를 주제·포맷·후킹·CTA 단위로 재조합</p></div>
+    <div class="week"><div class="w">08 · 월간</div><h3>경영 리포트</h3><p>광고 지표가 아닌 환자 이동·예약·매출 기준으로 의사결정</p></div>
+  </div>
+</section>
+
+<section id="s16" class="section">
+  <div class="num">16 / RISKS & GOVERNANCE</div><div class="kicker">퍼널 운영 시 반드시 관리할 리스크</div>
+  <div class="grid g2" style="margin-top:28px">
+    <div class="warning"><h3>의료광고·표현 리스크</h3><p>치료 효과의 보장, 과도한 비교·우월 표현, 전후사진 표시 방식, 환자 후기 사용 범위를 국가별·매체별로 점검합니다.</p></div>
+    <div class="warning"><h3>개인정보·리타겟팅 리스크</h3><p>민감정보를 광고 타깃 생성에 직접 사용하지 않고, 픽셀·CRM·LINE 데이터의 수집 목적·보관·접근 권한을 분리합니다.</p></div>
+    <div class="warning"><h3>성과 오판 리스크</h3><p>마지막 클릭만 보고 BOF에 예산을 과도하게 몰면 상단 신규 유입이 고갈되어 장기 CPA가 상승합니다.</p></div>
+    <div class="warning"><h3>채널 불일치 리스크</h3><p>광고에서 약속한 가격·사례·일정이 프로필·랜딩·상담 답변과 다르면 신뢰가 즉시 붕괴합니다.</p></div>
+  </div>
+  <div class="check" style="margin-top:20px"><h3>운영 체크포인트</h3><p>① 퍼널별 목표 분리 ② 포함·제외 타깃 관리 ③ 콘텐츠 승인 프로세스 ④ UTM/상담코드 ⑤ 월간 KPI 리뷰 ⑥ 의료광고·개인정보 검수</p></div>
+</section>
+
+
+<section id="s17" class="section compact">
+  <div class="num">17 / EVIDENCE & EXTERNAL REFERENCES</div>
+  <div class="kicker">퍼널·반복 노출·고관여 전환을 뒷받침하는 근거</div>
+  <h2 class="quote">퍼널은 단순한 광고업계 용어가 아니다. <mark>반복 인지, 다중 접점, 능동적 정보 탐색, 위험 검증</mark>이 결합되는 실제 의사결정 과정을 운영 가능한 구조로 바꾼 것이다.</h2>
+  <p class="evidence-intro">아래 자료는 퍼널의 모든 세부 운영안을 직접 증명하는 단일 연구가 아니라, 퍼널 설계를 구성하는 핵심 메커니즘을 각각 뒷받침합니다. 제목 또는 원문 보기 버튼을 누르면 외부 자료가 새 창에서 열립니다.</p>
+
+  <div class="evidence-grid">
+    <article class="evidence-card">
+      <div class="source-type">고전 실험 연구 · 인지심리</div>
+      <h3>Robert Zajonc, 「Attitudinal Effects of Mere Exposure」</h3>
+      <p>동일한 자극에 반복적으로 노출되는 것만으로도 친숙성과 호감이 높아질 수 있다는 ‘단순 노출 효과’의 대표 연구입니다.</p>
+      <div class="finding"><strong>핵심 근거</strong><br>TOF의 역할은 즉시 예약을 만드는 것이 아니라, 이후 검토 단계에서 병원이 완전히 낯설지 않도록 기억 기반을 형성하는 것입니다.</div>
+      <div class="implication"><strong>세린·이뻐 적용:</strong> 첫 노출에서 강한 전환 CTA보다 브랜드명·미감·문제 인식을 일관되게 반복합니다.</div>
+      <div class="evidence-links"><a class="outlink" href="https://doi.org/10.1037/h0025848" target="_blank" rel="noopener noreferrer">논문 원문 ↗</a></div>
+    </article>
+
+    <article class="evidence-card">
+      <div class="source-type">Journal of Marketing · 고객경험 연구</div>
+      <h3>Lemon & Verhoef, 「Understanding Customer Experience Throughout the Customer Journey」</h3>
+      <p>고객경험을 구매 전·구매·구매 후 단계와 브랜드·파트너·고객·외부 접점의 연속으로 설명하는 대표적인 고객여정 연구입니다.</p>
+      <div class="finding"><strong>핵심 근거</strong><br>성과는 개별 광고 한 개가 아니라 여러 접점이 시간에 걸쳐 결합하면서 형성됩니다. 따라서 광고, 인스타그램 프로필, 홈페이지, LINE 상담을 하나의 여정으로 관리해야 합니다.</div>
+      <div class="implication"><strong>세린·이뻐 적용:</strong> 광고 메시지와 프로필 증거, 상담 답변이 같은 브랜드 약속을 전달해야 합니다.</div>
+      <div class="evidence-links"><a class="outlink" href="https://doi.org/10.1509/jm.15.0420" target="_blank" rel="noopener noreferrer">논문 원문 ↗</a></div>
+    </article>
+
+    <article class="evidence-card">
+      <div class="source-type">대규모 소비자 조사 · McKinsey</div>
+      <h3>「The Consumer Decision Journey」</h3>
+      <p>5개 산업·3개 대륙의 약 2만 명 구매 결정을 분석해, 현대 소비자가 단순 직선형 퍼널이 아니라 반복 탐색과 평가를 거치는 의사결정 여정을 보인다고 설명합니다.</p>
+      <div class="finding"><strong>핵심 근거</strong><br>적극적 평가 단계의 주요 접점 중 약 3분의 2가 리뷰, 구전, 과거 경험 등 소비자 주도 정보에서 발생했습니다. 광고만으로 전환을 완성할 수 없다는 의미입니다.</div>
+      <div class="implication"><strong>세린·이뻐 적용:</strong> MOF에서 후기·사례·가격·의료진 기준처럼 환자가 스스로 검증할 자료를 충분히 제공합니다.</div>
+      <div class="evidence-links"><a class="outlink" href="https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/the-consumer-decision-journey" target="_blank" rel="noopener noreferrer">조사 보고서 ↗</a></div>
+    </article>
+
+    <article class="evidence-card">
+      <div class="source-type">International Journal of Research in Marketing · 기여도 분석</div>
+      <h3>Anderl et al., 「Mapping the Customer Journey」</h3>
+      <p>여러 온라인 채널과 접점이 전환에 미치는 영향을 경로 기반으로 분석하고, 마지막 클릭 같은 단순 휴리스틱과 실제 채널 기여도가 크게 다를 수 있음을 보여줍니다.</p>
+      <div class="finding"><strong>핵심 근거</strong><br>BOF가 마지막 클릭을 가져가더라도 TOF와 MOF가 사전에 만든 인지와 검토 행동의 기여를 제거해서는 안 됩니다.</div>
+      <div class="implication"><strong>세린·이뻐 적용:</strong> LINE 클릭만 평가하지 말고 영상 시청→프로필→저장→상담의 전체 이동률을 함께 봅니다.</div>
+      <div class="evidence-links"><a class="outlink" href="https://doi.org/10.1016/j.ijresmar.2016.03.001" target="_blank" rel="noopener noreferrer">논문 원문 ↗</a></div>
+    </article>
+
+    <article class="evidence-card">
+      <div class="source-type">BMC Health Services Research · 의료관광 검토</div>
+      <h3>「What is known about the patient's experience of medical tourism?」</h3>
+      <p>의료관광 환자 경험을 검토한 연구로, 의사결정·동기·위험·경험담이 핵심 주제이며 환자가 결정 전에 여러 정보원을 비교·평가한다는 점을 강조합니다.</p>
+      <div class="finding"><strong>핵심 근거</strong><br>해외 의료 선택은 일반 제품보다 비용, 안전, 이동, 사후관리 위험이 크기 때문에 ‘한 번 보고 예약’보다 다단계 정보 검증이 구조적으로 필요합니다.</div>
+      <div class="implication"><strong>세린·이뻐 적용:</strong> MOF·BOF에 통역, 이동, 회복, 부작용, 환불, 사후관리 정보를 핵심 증거로 배치합니다.</div>
+      <div class="evidence-links"><a class="outlink" href="https://pubmed.ncbi.nlm.nih.gov/20825667/" target="_blank" rel="noopener noreferrer">PubMed 보기 ↗</a></div>
+    </article>
+
+    <article class="evidence-card">
+      <div class="source-type">Globalization and Health · 의료관광 의사결정</div>
+      <h3>「Why do patients engage in medical tourism?」</h3>
+      <p>의료관광 참여가 치료 필요, 치료 접근 방식, 목적지, 품질과 안전을 순차적으로 검토하는 복합 의사결정임을 제시합니다.</p>
+      <div class="finding"><strong>핵심 근거</strong><br>환자는 먼저 자신의 필요를 인식하고, 다음으로 치료와 목적지를 비교하며, 마지막으로 품질·안전·접근 가능성을 확인합니다. 이는 TOF→MOF→BOF의 질문 변화와 맞닿아 있습니다.</div>
+      <div class="implication"><strong>세린·이뻐 적용:</strong> 시술 판매 순서가 아니라 환자의 질문 순서로 콘텐츠를 배열합니다.</div>
+      <div class="evidence-links"><a class="outlink" href="https://pubmed.ncbi.nlm.nih.gov/23007007/" target="_blank" rel="noopener noreferrer">PubMed 보기 ↗</a></div>
+    </article>
+
+    <article class="evidence-card">
+      <div class="source-type">Meta 공식 가이드 · 캠페인 목적</div>
+      <h3>Awareness → Traffic/Consideration → Leads/Retargeting</h3>
+      <p>Meta는 인지도 목표를 도달·광고 회상·영상 조회에, 트래픽 목표를 방문과 관심 형성에, 리드 목표를 복잡한 검토 주기의 잠재고객 육성과 전환에 맞춰 구분합니다.</p>
+      <div class="finding"><strong>핵심 근거</strong><br>서로 다른 행동을 원하는 캠페인은 목적과 최적화 신호를 분리해야 합니다. 또한 기존 상호작용자를 Custom Audience로 재접촉하는 리타겟팅 구조를 공식 지원합니다.</div>
+      <div class="implication"><strong>세린·이뻐 적용:</strong> TOF·MOF·BOF를 하나의 광고세트에 혼합하지 않고 목적·타깃·소재·KPI를 분리합니다.</div>
+      <div class="evidence-links">
+        <a class="outlink" href="https://www.facebook.com/business/ads/ad-objectives/awareness" target="_blank" rel="noopener noreferrer">Awareness ↗</a>
+        <a class="outlink" href="https://www.facebook.com/business/ads/ad-objectives/traffic" target="_blank" rel="noopener noreferrer">Traffic ↗</a>
+        <a class="outlink" href="https://www.facebook.com/business/ads/ad-objectives/lead-generation" target="_blank" rel="noopener noreferrer">Leads ↗</a>
+        <a class="outlink" href="https://www.facebook.com/business/goals/retargeting" target="_blank" rel="noopener noreferrer">Retargeting ↗</a>
+      </div>
+    </article>
+
+    <article class="evidence-card">
+      <div class="source-type">근거 해석 · 운영 원칙</div>
+      <h3>논문이 증명하는 것은 “고정된 3단계 공식”이 아니라 의사결정 메커니즘이다</h3>
+      <p>실제 환자 여정은 직선이 아니며 MOF에서 TOF로 돌아가거나 상담 후 다시 검토할 수 있습니다. TOF·MOF·BOF는 이 복잡성을 운영과 측정이 가능한 단위로 단순화한 실무 모델입니다.</p>
+      <div class="finding"><strong>보고서 해석 원칙</strong><br>퍼널 단계는 환자를 기계적으로 분류하는 표가 아니라, 현재 환자가 가진 질문과 필요한 증거에 따라 메시지를 바꾸기 위한 운영 프레임입니다.</div>
+      <div class="implication"><strong>의사결정 기준:</strong> 단계 이름보다 실제 행동 데이터와 질문 변화가 우선입니다.</div>
+    </article>
+  </div>
+  <div class="evidence-note"><strong>주의:</strong> 위 연구와 공식 자료는 퍼널 마케팅의 인과효과를 세린·이뻐 캠페인에서 자동으로 보장하지 않습니다. 실제 효과는 국가, 시술, 브랜드 인지도, 소재, 예산, 상담 품질에 따라 달라지므로 퍼널별 KPI와 예약·매출 데이터를 연결한 자체 실험으로 검증해야 합니다.</div>
+</section>
+
+<section id="s18" class="section final">
+  <div class="num" style="color:#9bb4b7">18 / FINAL MESSAGE</div><div class="kicker">그래서 퍼널 마케팅을 해야 한다</div>
+  <h2 class="title" style="max-width:1100px">환자는 광고 한 번을 보고 예약하지 않는다.<br><em style="color:#b9d8db">이해할수록 믿고, 믿을수록 질문하며, 질문할 수 있을 때 예약한다.</em></h2>
+  <p class="lead">세린과 이뻐의 일본 마케팅은 단순 노출 경쟁이 아니라, 환자가 단계별로 안심하도록 설계된 신뢰 시스템이어야 합니다.</p>
+  <div class="grid g3" style="margin-top:40px"><div class="card"><h3>브랜드</h3><p>선택 이유를 만든다</p></div><div class="card"><h3>퍼널 콘텐츠</h3><p>신뢰의 순서를 만든다</p></div><div class="card"><h3>광고·CRM</h3><p>반복과 학습을 만든다</p></div></div>
+  <div class="formula" style="background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.16)">퍼널 마케팅은 광고비를 쓰는 방법이 아니라, 브랜드가 환자를 얻는 구조다.</div>
+</section>
+<div class="footer"><span>SERENE CLINIC · IPPEO JAPAN MARKETING</span><span>Funnel Marketing Necessity Report</span></div>
+</main></div>
+<script>
+const sections=[...document.querySelectorAll('section[id]')], links=[...document.querySelectorAll('#toc a')];
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){links.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+e.target.id))}}),{rootMargin:'-35% 0px -55% 0px'});sections.forEach(s=>io.observe(s));
+</script>
+</body>
+</html>
